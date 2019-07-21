@@ -1,0 +1,61 @@
+html,
+body,
+header,
+#intro {
+	height: 100%;
+}
+
+#intro {
+	/* background:  url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed; */
+	background: linear-gradient(to right, rgba(0,0,0, 0.5), rgba(67, 67, 67, 0.5)), url("/img/picture/bg.jpg")no-repeat center center fixed;
+	/* background: #4b6cb7;
+	background: -webkit-linear-gradient(to right, rgba(43, 163, 73, 0.8), rgba(211, 220, 39, 0.8));
+	background: linear-gradient(to right, rgba(43, 163, 73, 0.8), rgba(33, 126, 57, 1));  */
+
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.logo-img {
+	width: 30px;
+	height: auto;
+}
+.login-form {
+	min-width: 400px;
+}
+
+.md-form {
+	padding: 10px;
+}
+
+.md-form input {
+	color: #fff !important;
+}
+.md-form input::placeholder {
+	color: #fff;
+}
+.md-form input:focus {
+	color: #D3DB26 !important;
+    box-shadow: 0 1px 0 0 #D3DB26 !important;
+    border-bottom: 1px solid #D3DB26 !important;
+}
+.btn-login:hover {
+	border-color: #D3DB26 !important;
+	color: #D3DB26 !important;
+}
+.top-nav-collapse {
+	background-color: #24355C;
+}
+@media (max-width: 768px) {
+	.navbar:not(.top-nav-collapse) {
+		background-color: #24355C;
+	}
+}
+@media (min-width: 800px) and (max-width: 850px) {
+	.navbar:not(.top-nav-collapse) {
+		background-color: #24355C;
+	}
+}
