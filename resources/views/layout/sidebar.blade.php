@@ -1,7 +1,7 @@
 <div class="sidebar-fixed position-fixed">
 
 	<a class="logo-wrapper waves-effect">
-		<img src="/img/logo/logo2.jpg" class="img-fluid" alt="">
+		<img src="/img/logo/tasnim.png" class="img-fluid" alt="">
 	</a>
 
 	<div class="list-group list-group-flush">

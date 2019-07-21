@@ -1,6 +1,6 @@
 <!-- Brand -->
 <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-	<strong class="main-text">LIFE ENGINEERING</strong>
+	<strong class="main-text">TASNIM</strong>
 </a>
 
 <!-- Collapse -->

@@ -134,7 +134,7 @@
 		<!--Copyright-->
 		<div class="footer-copyright py-3">
 			© 2019 Copyright
-			<a href="#" target="_blank"> Life Engineering </a>
+			<a href="#" target="_blank"> Tasnim </a>
 		</div>
 		<!--/.Copyright-->
 
