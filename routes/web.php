@@ -13,7 +13,7 @@
 
 
 
-Route::group(['domain'=>'admin.'.env('DOMAIN'),'namespace' => 'Admin'],function () {
+Route::group(['namespace' => 'Admin'],function () {
 	Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
 	Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
@@ -39,16 +39,16 @@ Route::group(['domain'=>'admin.'.env('DOMAIN'),'namespace' => 'Admin'],function 
 
 		Route::group(['prefix'=>'expenses','as'=>'expenses.'],function(){
 
-			Route::group(['prefix'=>'invoice','as'=>'invoice.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@invoiceIndex']);
+			Route::group(['prefix'=>'bill','as'=>'bill.'],function(){
+				Route::get('/',['as'=>'index','uses'=>'ExpensesController@billIndex']);
 			});
 
-			Route::group(['prefix'=>'revenue','as'=>'revenue.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@revenueIndex']);
+			Route::group(['prefix'=>'payment','as'=>'payment.'],function(){
+				Route::get('/',['as'=>'index','uses'=>'ExpensesController@paymentIndex']);
 			});
 
-			Route::group(['prefix'=>'customer','as'=>'customer.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@customerIndex']);
+			Route::group(['prefix'=>'vendor','as'=>'vendor.'],function(){
+				Route::get('/',['as'=>'index','uses'=>'ExpensesController@vendorIndex']);
 			});
 
 		});

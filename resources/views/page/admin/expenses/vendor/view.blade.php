@@ -14,7 +14,7 @@
 		<h4 class="mb-2 mb-sm-0">
 			<span>Income</span>
 			<span>/</span>
-			<span>Invoices</span>
+			<span>Vendors</span>
 		</h4>
 
 		<form class="d-flex justify-content-center">
@@ -46,7 +46,7 @@
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
-						<span>Manage Invoices	</span>
+						<span>Manage Vendors	</span>
 					</h4>
 
 					<div class="d-flex justify-content-center">
@@ -63,11 +63,10 @@
 					<!-- Table head -->
 					<thead class="blue-grey lighten-4">
 						<tr>
-							<th>Number</th>
-							<th>Customer</th>
-							<th>Amount</th>
-							<th>Invoice Date</th>
-							<th>Due Date</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Unpaid</th>
 							<th>Status</th>
 							<th class="text-center">Action</th>
 						</tr>
@@ -77,11 +76,10 @@
 					<!-- Table body -->
 					<tbody>
 			            <tr>
-			                <td>000001</td>
-			                <td>Shawn Mendez</td>
-			                <td>RM350</td>
-			                <td>22/06/2019</td>
-			                <td>21/07/2019</td>
+			                <td>WebSoho</td>
+							<td>websoho@gmail.com</td>
+			                <td>0126549872</td>
+			                <td>1 Bill</td>
 			                <td class="text-danger">Overdue</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
@@ -90,11 +88,10 @@
 			                </td>
 			            </tr>
 			            <tr>
-			                <td>000002</td>
-			                <td>Camilla Cabello</td>
-			                <td>RM350</td>
-			                <td>22/06/2019</td>
-			                <td>21/07/2019</td>
+			                <td>Telaga Biru</td>
+							<td>birunyetelagaini@gmail.com</td>
+			                <td>015254651</td>
+			                <td>No</td>
 			                <td class="text-success">Paid</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
@@ -103,12 +100,11 @@
 			                </td>
 			            </tr>
 			            <tr>
-			                <td>000003</td>
-			                <td>Anne Marie</td>
-			                <td>RM350</td>
-			                <td>12/07/2019</td>
-			                <td>11/08/2019</td>
-			                <td class="text-warning">Unpaid</td>
+			                <td>Dutch Lady</td>
+							<td>clichemilk@gmail.com</td>
+			                <td>0154164632</td>
+			                <td>1 Bill</td>
+			                <td class="text-warning">Pending</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
@@ -130,4 +126,6 @@
 	<!--Grid column-->
 </div>
 <!--Grid row-->
+@include('modal.question')
+@include('script.question')
 @stop

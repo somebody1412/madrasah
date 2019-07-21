@@ -12,9 +12,9 @@
 	<div class="card-body d-sm-flex justify-content-between">
 
 		<h4 class="mb-2 mb-sm-0">
-			<span>Income</span>
+			<span>Expenses</span>
 			<span>/</span>
-			<span>Invoices</span>
+			<span>Bills</span>
 		</h4>
 
 		<form class="d-flex justify-content-center">
@@ -46,7 +46,7 @@
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
-						<span>Manage Invoices	</span>
+						<span>Manage Bills	</span>
 					</h4>
 
 					<div class="d-flex justify-content-center">
@@ -64,9 +64,9 @@
 					<thead class="blue-grey lighten-4">
 						<tr>
 							<th>Number</th>
-							<th>Customer</th>
+							<th>Vendor</th>
 							<th>Amount</th>
-							<th>Invoice Date</th>
+							<th>Bill Date</th>
 							<th>Due Date</th>
 							<th>Status</th>
 							<th class="text-center">Action</th>
@@ -78,8 +78,8 @@
 					<tbody>
 			            <tr>
 			                <td>000001</td>
-			                <td>Shawn Mendez</td>
-			                <td>RM350</td>
+			                <td>WebSoho</td>
+			                <td>RM3500</td>
 			                <td>22/06/2019</td>
 			                <td>21/07/2019</td>
 			                <td class="text-danger">Overdue</td>
@@ -91,8 +91,8 @@
 			            </tr>
 			            <tr>
 			                <td>000002</td>
-			                <td>Camilla Cabello</td>
-			                <td>RM350</td>
+			                <td>Telaga Biru</td>
+			                <td>RM3120</td>
 			                <td>22/06/2019</td>
 			                <td>21/07/2019</td>
 			                <td class="text-success">Paid</td>
@@ -104,8 +104,8 @@
 			            </tr>
 			            <tr>
 			                <td>000003</td>
-			                <td>Anne Marie</td>
-			                <td>RM350</td>
+			                <td>Dutch Lady</td>
+			                <td>RM2300</td>
 			                <td>12/07/2019</td>
 			                <td>11/08/2019</td>
 			                <td class="text-warning">Unpaid</td>
@@ -130,4 +130,6 @@
 	<!--Grid column-->
 </div>
 <!--Grid row-->
+@include('modal.question')
+@include('script.question')
 @stop

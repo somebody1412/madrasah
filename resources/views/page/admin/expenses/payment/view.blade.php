@@ -12,9 +12,9 @@
 	<div class="card-body d-sm-flex justify-content-between">
 
 		<h4 class="mb-2 mb-sm-0">
-			<span>Exam Management</span>
+			<span>Expenses</span>
 			<span>/</span>
-			<span>Exam Questions</span>
+			<span>Payments</span>
 		</h4>
 
 		<form class="d-flex justify-content-center">
@@ -46,7 +46,7 @@
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
-						<span>Manage Questions</span>
+						<span>Manage Payments	</span>
 					</h4>
 
 					<div class="d-flex justify-content-center">
@@ -63,8 +63,11 @@
 					<!-- Table head -->
 					<thead class="blue-grey lighten-4">
 						<tr>
-							<th>Question</th>
-							<th>Number Of Option</th>
+							<th>Date</th>
+							<th>Amount</th>
+							<th>Vendor</th>
+							<th>Category</th>
+							<th>Account</th>
 							<th class="text-center">Action</th>
 						</tr>
 					</thead>
@@ -72,30 +75,42 @@
 
 					<!-- Table body -->
 					<tbody>
-						@forelse($questions as $value)
-			            <tr>
-			                <td>{{$value->question}}</td>
-			                <td class="text-center">{{$value->question_answer->count()}}</td>
-			                <td>
-			                    {!! Form::open(['method' => 'POST', 'route' => ['dashboard.questions.delete']]) !!}
-			                    <a href="/dashboard/questions/view/{{$value->id}}" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="#editQuestion" data-id="{{$value->id}}" class="btn btn-table btn-edit">Edit</a>
-			                    <a href="/dashboard/answer/viewOption/{{$value->id}}" class="btn btn-table btn-view">View Answers</a>
-			                    <input type="hidden" name="questionid" value="{{$value->id}}">
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                    {!! Form::close() !!}
-			                </td>
-			            </tr>
-						@empty
 						<tr>
-							<td colspan="4" class="text-center">
-								<p class="text-dark">
-									No Data Available!
-								</p>
+							<td>21/07/2019</td>
+							<td>RM3500</td>
+							<td>WebSoho</td>
+							<td>Tuition Fees</td>
+							<td>5129874154</td>
+							<td>
+								<a href="#" class="btn btn-table btn-view">View</a>
+								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<button type="button" class="btn btn-table btn-delete">Delete</button>
 							</td>
-
 						</tr>
-			            @endforelse
+						<tr>
+							<td>21/07/2019</td>
+							<td>RM3120</td>
+							<td>Telaga Biru</td>
+							<td>Tuition Fees</td>
+							<td>68746354135</td>
+							<td>
+								<a href="#" class="btn btn-table btn-view">View</a>
+								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<button type="button" class="btn btn-table btn-delete">Delete</button>
+							</td>
+						</tr>
+						<tr>
+							<td>21/07/2019</td>
+							<td>RM2300</td>
+							<td>Dutch Lady</td>
+							<td>Tuition Fees</td>
+							<td>98616546151</td>
+							<td>
+								<a href="#" class="btn btn-table btn-view">View</a>
+								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<button type="button" class="btn btn-table btn-delete">Delete</button>
+							</td>
+						</tr>
 					</tbody>
 					<!-- Table body -->
 

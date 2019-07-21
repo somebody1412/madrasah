@@ -22,15 +22,15 @@
 			Income
 		</a>
 		<div class="collapse list-group list-group-flush {{(\Route::current()->getName() == 'dashboard.exam.setting' || \Route::current()->getName() == 'dashboard.exam.notice' || \Route::current()->getName() == 'dashboard.questions.index' || \Route::current()->getName() == 'dashboard.questions.create' || \Route::current()->getName() == 'dashboard.questions.view' || \Route::current()->getName() == 'dashboard.questions.edit' || \Route::current()->getName() == 'dashboard.answer.edit' || \Route::current()->getName() == 'dashboard.exam.notice.edit' || \Route::current()->getName() == 'dashboard.user.index' || \Route::current()->getName() == 'dashboard.user.review')?'show':''}}" id="collapseExample">
-			<a href="/dashboard/exam" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.exam.setting')?'':'list-group-item-action'}}">
+			<a href="/dashboard/income/invoice" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.exam.setting')?'':'list-group-item-action'}}">
 				<i class="fa fa-pencil-square mr-3"></i>
 				Invoices
 			</a>
-			<a href="/dashboard/exam/noticeview" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.exam.notice' || \Route::current()->getName() == 'dashboard.exam.notice.edit')?'':'list-group-item-action'}}">
+			<a href="/dashboard/income/revenue" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.exam.notice' || \Route::current()->getName() == 'dashboard.exam.notice.edit')?'':'list-group-item-action'}}">
 				<i class="fa fa-exclamation-circle mr-3"></i>
 				Revenue
 			</a>
-			<a href="/dashboard/questions" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.questions.index' || \Route::current()->getName() == 'dashboard.questions.create' || \Route::current()->getName() == 'dashboard.questions.view' || \Route::current()->getName() == 'dashboard.questions.edit' || \Route::current()->getName() == 'dashboard.answer.edit')?'':'list-group-item-action'}}">
+			<a href="/dashboard/income/customer" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.questions.index' || \Route::current()->getName() == 'dashboard.questions.create' || \Route::current()->getName() == 'dashboard.questions.view' || \Route::current()->getName() == 'dashboard.questions.edit' || \Route::current()->getName() == 'dashboard.answer.edit')?'':'list-group-item-action'}}">
 				<i class="fa fa-question-circle mr-3"></i>
 				Customers
 			</a>
