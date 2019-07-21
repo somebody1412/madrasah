@@ -25,6 +25,7 @@ Route::group(['namespace' => 'Admin'],function () {
 
 			Route::group(['prefix'=>'invoice','as'=>'invoice.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'IncomeController@invoiceIndex']);
+				Route::get('/add',['as'=>'add','uses'=>'IncomeController@invoiceAdd']);
 			});
 
 			Route::group(['prefix'=>'revenue','as'=>'revenue.'],function(){

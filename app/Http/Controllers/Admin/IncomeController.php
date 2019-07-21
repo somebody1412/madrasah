@@ -11,6 +11,11 @@ class IncomeController extends Controller
 		return view('page.admin.income.invoice.view');
 	}
 
+    public function invoiceAdd(){
+
+		return view('page.admin.income.invoice.add');
+	}
+
 
 	public function revenueIndex(){
 

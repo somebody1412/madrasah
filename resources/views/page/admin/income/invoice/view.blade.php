@@ -51,7 +51,7 @@
 
 					<div class="d-flex justify-content-center">
 						<!-- Default input -->
-						<a href="/dashboard/questions/create" class="btn btn-primary mr-0">Add</a>
+						<a href="/dashboard/income/invoice/add" class="btn btn-primary mr-0">Add</a>
 
 					</div>
 
