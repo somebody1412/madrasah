@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<title>Life Engineering</title>
+	<title>Tasnim</title>
 	<!-- Meta End-->
 
 	<!-- Styles -->
@@ -40,8 +40,8 @@
 			<div class="container">
 
 				<!-- Navbar brand -->
-				<img class="logo-img" src="/img/logo/le2.png" />
-				<a class="navbar-brand" href="#">Life Engineering</a>
+				<img class="logo-img" src="/img/logo/tasnim-small.png" />
+				<a class="navbar-brand" href="#">Tasnim</a>
 
 				<!-- Collapse button -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
