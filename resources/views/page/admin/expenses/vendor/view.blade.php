@@ -12,7 +12,7 @@
 	<div class="card-body d-sm-flex justify-content-between">
 
 		<h4 class="mb-2 mb-sm-0">
-			<span>Income</span>
+			<span>Expenses</span>
 			<span>/</span>
 			<span>Vendors</span>
 		</h4>
@@ -51,7 +51,7 @@
 
 					<div class="d-flex justify-content-center">
 						<!-- Default input -->
-						<a href="/dashboard/questions/create" class="btn btn-primary mr-0">Add</a>
+						<a href="/dashboard/expenses/vendor/add" class="btn btn-primary mr-0">Add</a>
 
 					</div>
 
@@ -126,6 +126,4 @@
 	<!--Grid column-->
 </div>
 <!--Grid row-->
-@include('modal.question')
-@include('script.question')
 @stop

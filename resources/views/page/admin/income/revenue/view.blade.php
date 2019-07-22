@@ -51,7 +51,7 @@
 
 					<div class="d-flex justify-content-center">
 						<!-- Default input -->
-						<a href="/dashboard/questions/create" class="btn btn-primary mr-0">Add</a>
+						<a href="/dashboard/income/revenue/add" class="btn btn-primary mr-0">Add</a>
 
 					</div>
 
@@ -126,6 +126,4 @@
 	<!--Grid column-->
 </div>
 <!--Grid row-->
-@include('modal.question')
-@include('script.question')
 @stop

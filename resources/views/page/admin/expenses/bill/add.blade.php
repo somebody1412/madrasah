@@ -12,11 +12,11 @@
 	<div class="card-body d-sm-flex justify-content-between">
 
 		<h4 class="mb-2 mb-sm-0">
-			<span>Income</span>
+			<span>Expenses</span>
 			<span>/</span>
-			<span>Invoices</span>
+			<span>Bill</span>
 			<span>/</span>
-			<span>Add Invoice</span>
+			<span>Add Bill</span>
 		</h4>
 
 		<form class="d-flex justify-content-center">
@@ -48,7 +48,7 @@
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
-						<span>Add New Invoice	</span>
+						<span>Add New Bill	</span>
 					</h4>
 
 				</div>
@@ -56,11 +56,11 @@
 				<div class="row">
 					<div class="col-6">
 						<div class="form-group">
-							<label class="control-label">Customer</label>
+							<label class="control-label">Vendor</label>
 							<select class="form-control" name="customer">
-								<option>Shawn Mendez</option>
-								<option>Camilla Cabello</option>
-								<option>Anne Marie</option>
+								<option>WebSoho</option>
+								<option>Telaga Biru</option>
+								<option>Dutch Lady</option>
 							</select>
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 				<div class="row">
 					<div class="col-6">
 						<div class="form-group">
-							<label class="control-label">Invoice Date</label>
+							<label class="control-label">Bill Date</label>
 							<input type="date" name="invoice-date" class="form-control" />
 						</div>
 					</div>
@@ -91,7 +91,7 @@
 				<div class="row">
 					<div class="col-6">
 						<div class="form-group">
-							<label class="control-label">Invoice Number</label>
+							<label class="control-label">Bill Number</label>
 							<input type="text" name="invoice-no" class="form-control" />
 						</div>
 					</div>
@@ -181,7 +181,7 @@
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<a href="/dashboard/income/invoice" class="btn btn-success">Save</a>
+						<a href="/dashboard/expenses/bill" class="btn btn-success">Save</a>
 						<button class="btn btn-light">Cancel</button>
 					</div>
 				</div>

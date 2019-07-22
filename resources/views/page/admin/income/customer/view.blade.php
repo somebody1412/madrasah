@@ -126,6 +126,4 @@
 	<!--Grid column-->
 </div>
 <!--Grid row-->
-@include('modal.question')
-@include('script.question')
 @stop

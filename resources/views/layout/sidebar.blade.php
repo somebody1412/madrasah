@@ -17,42 +17,42 @@
 			<i class="fa fa-pencil-square mr-3"></i>
 			Exam Settings
 		</a> -->
-		<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.invoice.index' || \Route::current()->getName() == 'dashboard.income.invoice.add' || \Route::current()->getName() == 'dashboard.income.revenue.index' || \Route::current()->getName() == 'dashboard.income.customer.index')?'active':'list-group-item-action'}}">
-			<i class="fa fa-files-o mr-3"></i>
+		<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.invoice.index' || \Route::current()->getName() == 'dashboard.income.invoice.add' || \Route::current()->getName() == 'dashboard.income.revenue.index' || \Route::current()->getName() == 'dashboard.income.revenue.add' || \Route::current()->getName() == 'dashboard.income.customer.index' || \Route::current()->getName() == 'dashboard.income.customer.add')?'active':'list-group-item-action'}}">
+			<i class="fa fa-bar-chart mr-3"></i>
 			Income
 		</a>
-		<div class="collapse list-group list-group-flush {{(\Route::current()->getName() == 'dashboard.income.invoice.index' || \Route::current()->getName() == 'dashboard.income.invoice.add' || \Route::current()->getName() == 'dashboard.income.revenue.index' || \Route::current()->getName() == 'dashboard.income.customer.index')?'show':''}}" id="collapseExample">
+		<div class="collapse list-group list-group-flush {{(\Route::current()->getName() == 'dashboard.income.invoice.index' || \Route::current()->getName() == 'dashboard.income.invoice.add' || \Route::current()->getName() == 'dashboard.income.revenue.index' || \Route::current()->getName() == 'dashboard.income.revenue.add' || \Route::current()->getName() == 'dashboard.income.customer.index' || \Route::current()->getName() == 'dashboard.income.customer.add')?'show':''}}" id="collapseExample">
 			<a href="/dashboard/income/invoice" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.invoice.index' || \Route::current()->getName() == 'dashboard.income.invoice.add')?'':'list-group-item-action'}}">
 				<i class="fa fa-pencil-square mr-3"></i>
 				Invoices
 			</a>
-			<a href="/dashboard/income/revenue" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.revenue.index')?'':'list-group-item-action'}}">
-				<i class="fa fa-exclamation-circle mr-3"></i>
+			<a href="/dashboard/income/revenue" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.revenue.index' || \Route::current()->getName() == 'dashboard.income.revenue.add')?'':'list-group-item-action'}}">
+				<i class="fa fa-line-chart mr-3"></i>
 				Revenues
 			</a>
-			<a href="/dashboard/income/customer" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.customer.index')?'':'list-group-item-action'}}">
-				<i class="fa fa-question-circle mr-3"></i>
+			<a href="/dashboard/income/customer" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.income.customer.index' || \Route::current()->getName() == 'dashboard.income.customer.add')?'':'list-group-item-action'}}">
+				<i class="fa fa-users mr-3"></i>
 				Customers
 			</a>
 		</div>
 
 
 
-		<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.bill.index' || \Route::current()->getName() == 'dashboard.expenses.payment.index' || \Route::current()->getName() == 'dashboard.expenses.vendor.index')?'active':'list-group-item-action'}}">
+		<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.bill.index' || \Route::current()->getName() == 'dashboard.expenses.bill.add' || \Route::current()->getName() == 'dashboard.expenses.payment.index' || \Route::current()->getName() == 'dashboard.expenses.payment.add' || \Route::current()->getName() == 'dashboard.expenses.vendor.index' || \Route::current()->getName() == 'dashboard.expenses.vendor.add')?'active':'list-group-item-action'}}">
 			<i class="fa fa-files-o mr-3"></i>
 			Expenses
 		</a>
-		<div class="collapse list-group list-group-flush {{(\Route::current()->getName() == 'dashboard.expenses.bill.index' || \Route::current()->getName() == 'dashboard.expenses.payment.index' || \Route::current()->getName() == 'dashboard.expenses.vendor.index')?'show':''}}" id="collapseExample">
-			<a href="/dashboard/expenses/bill" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.bill.index')?'':'list-group-item-action'}}">
+		<div class="collapse list-group list-group-flush {{(\Route::current()->getName() == 'dashboard.expenses.bill.index' || \Route::current()->getName() == 'dashboard.expenses.bill.add' || \Route::current()->getName() == 'dashboard.expenses.payment.index' || \Route::current()->getName() == 'dashboard.expenses.payment.add' || \Route::current()->getName() == 'dashboard.expenses.vendor.index' || \Route::current()->getName() == 'dashboard.expenses.vendor.add')?'show':''}}" id="collapseExample">
+			<a href="/dashboard/expenses/bill" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.bill.index' || \Route::current()->getName() == 'dashboard.expenses.bill.add')?'':'list-group-item-action'}}">
 				<i class="fa fa-pencil-square mr-3"></i>
 				Bills
 			</a>
-			<a href="/dashboard/expenses/payment" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.payment.index')?'':'list-group-item-action'}}">
-				<i class="fa fa-exclamation-circle mr-3"></i>
+			<a href="/dashboard/expenses/payment" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.payment.index' || \Route::current()->getName() == 'dashboard.expenses.payment.add')?'':'list-group-item-action'}}">
+				<i class="fa fa-line-chart mr-3"></i>
 				Payments
 			</a>
-			<a href="/dashboard/expenses/vendor" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.vendor.index')?'':'list-group-item-action'}}">
-				<i class="fa fa-question-circle mr-3"></i>
+			<a href="/dashboard/expenses/vendor" class="pl-5 list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.expenses.vendor.index' || \Route::current()->getName() == 'dashboard.expenses.vendor.add')?'':'list-group-item-action'}}">
+				<i class="fa fa-users mr-3"></i>
 				Vendors
 			</a>
 		</div>

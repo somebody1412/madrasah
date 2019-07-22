@@ -22,9 +22,19 @@ class IncomeController extends Controller
 		return view('page.admin.income.revenue.view');
 	}
 
+	public function revenueAdd(){
+
+		return view('page.admin.income.revenue.add');
+	}
 
 	public function customerIndex(){
 
 		return view('page.admin.income.customer.view');
 	}
+
+	public function customerAdd(){
+
+		return view('page.admin.income.customer.add');
+	}
+
 }
