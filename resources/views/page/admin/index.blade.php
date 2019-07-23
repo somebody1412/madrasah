@@ -89,16 +89,14 @@
 						<hr class="hr-light">
 
 						<!-- Material input -->
-						{{ Form::open(array('url' => '/login')) }}
-						{{ csrf_field() }}
 						<div class="md-form">
 							<input type="email" name="email" class="form-control mb-3" placeholder="Email">
 							<input type="password" name="password" class="form-control" placeholder="Password">
 						</div>
 
 
-						<button type="submit" class="btn btn-outline-white btn-login mb-5">Log In<i class="fa fa-external-link ml-2"></i></button>
-						{{ Form::close() }}
+						<a  href="/dashboard" class="btn btn-outline-white btn-login mb-5">Log In<i class="fa fa-external-link ml-2"></i></a> 
+
 
 
 					</div>
