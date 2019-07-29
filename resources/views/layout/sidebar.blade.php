@@ -60,6 +60,10 @@
 			<i class="fa fa-list mr-3"></i>
 			Exam Notice
 		</a> -->
+		<a href="/dashboard/module/" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.module.index')?'active':'list-group-item-action'}}">
+			<i class="fa fa-files-o mr-3"></i>
+			Module
+		</a>
 		<a href="/user/logout" class="list-group-item waves-effect {{(\Route::current()->getName() == 'logout')?'active':'list-group-item-action'}}">
 			<i class="fa fa-sign-out mr-3"></i>
 			Logout

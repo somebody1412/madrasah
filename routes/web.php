@@ -59,5 +59,10 @@ Route::group(['namespace' => 'Admin'],function () {
 
 		});
 
+		Route::group(['prefix'=>'module','as'=>'module.'],function(){
+			Route::get('/',['as'=>'index','uses'=>'ModuleController@moduleIndex']);
+			Route::get('/add',['as'=>'add','uses'=>'ModuleController@moduleAdd']);
+		});
+
 	});
 });
