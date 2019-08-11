@@ -25,7 +25,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        $this->app['view']->addNamespace('admin', base_path() . '/resources/views/page/admin');
-        $this->app['view']->addNamespace('user', base_path() . '/resources/views/page/user');
     }
 }

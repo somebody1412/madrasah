@@ -16,12 +16,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        if (Auth::user())
-        {
-            LeApi::admin_login();
-            return redirect('/dashboard');
-        }
-        return view('admin::index');
+        return view('page.admin.index');
     }
 
     /**
