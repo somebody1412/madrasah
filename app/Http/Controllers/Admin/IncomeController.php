@@ -16,6 +16,13 @@ class IncomeController extends Controller
 		return view('page.admin.income.invoice.add');
 	}
 
+    public function invoiceEdit(){
+
+		return view('page.admin.income.invoice.edit');
+	}
+
+
+
 
 	public function revenueIndex(){
 
@@ -27,6 +34,14 @@ class IncomeController extends Controller
 		return view('page.admin.income.revenue.add');
 	}
 
+	public function revenueEdit(){
+
+		return view('page.admin.income.revenue.edit');
+	}
+
+
+
+
 	public function customerIndex(){
 
 		return view('page.admin.income.customer.view');
@@ -35,6 +50,11 @@ class IncomeController extends Controller
 	public function customerAdd(){
 
 		return view('page.admin.income.customer.add');
+	}
+
+	public function customerEdit(){
+
+		return view('page.admin.income.customer.edit');
 	}
 
 }

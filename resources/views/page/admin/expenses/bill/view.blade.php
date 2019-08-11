@@ -85,7 +85,7 @@
 			                <td class="text-danger">Overdue</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/expenses/bill/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>
@@ -98,7 +98,7 @@
 			                <td class="text-success">Paid</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/expenses/bill/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>
@@ -111,7 +111,7 @@
 			                <td class="text-warning">Unpaid</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/expenses/bill/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>

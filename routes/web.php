@@ -26,16 +26,19 @@ Route::group(['namespace' => 'Admin'],function () {
 			Route::group(['prefix'=>'invoice','as'=>'invoice.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'IncomeController@invoiceIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'IncomeController@invoiceAdd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'IncomeController@invoiceEdit']);
 			});
 
 			Route::group(['prefix'=>'revenue','as'=>'revenue.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'IncomeController@revenueIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'IncomeController@revenueAdd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'IncomeController@revenueEdit']);
 			});
 
 			Route::group(['prefix'=>'customer','as'=>'customer.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'IncomeController@customerIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'IncomeController@customerAdd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'IncomeController@customerEdit']);
 			});
 
 		});
@@ -45,16 +48,19 @@ Route::group(['namespace' => 'Admin'],function () {
 			Route::group(['prefix'=>'bill','as'=>'bill.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'ExpensesController@billIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@billAdd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@billEdit']);
 			});
 
 			Route::group(['prefix'=>'payment','as'=>'payment.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'ExpensesController@paymentIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@paymentadd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@paymentEdit']);
 			});
 
 			Route::group(['prefix'=>'vendor','as'=>'vendor.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'ExpensesController@vendorIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@vendorAdd']);
+				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@vendorEdit']);
 			});
 
 		});
@@ -62,6 +68,7 @@ Route::group(['namespace' => 'Admin'],function () {
 		Route::group(['prefix'=>'module','as'=>'module.'],function(){
 			Route::get('/',['as'=>'index','uses'=>'ModuleController@moduleIndex']);
 			Route::get('/add',['as'=>'add','uses'=>'ModuleController@moduleAdd']);
+			Route::get('/edit',['as'=>'edit','uses'=>'ModuleController@moduleEdit']);
 		});
 
 	});

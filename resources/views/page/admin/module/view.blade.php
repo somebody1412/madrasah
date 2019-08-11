@@ -83,7 +83,7 @@
 			                <td class="text-success">Active</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>
@@ -95,7 +95,7 @@
 			                <td class="text-danger">Inactive</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>
@@ -107,7 +107,7 @@
 			                <td class="text-danger">Inactive</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
 			            </tr>

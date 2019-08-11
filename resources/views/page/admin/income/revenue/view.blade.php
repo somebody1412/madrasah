@@ -83,7 +83,7 @@
 							<td>5129874154</td>
 							<td>
 								<a href="#" class="btn btn-table btn-view">View</a>
-								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
 							</td>
 						</tr>
@@ -95,7 +95,7 @@
 							<td>68746354135</td>
 							<td>
 								<a href="#" class="btn btn-table btn-view">View</a>
-								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
 							</td>
 						</tr>
@@ -107,7 +107,7 @@
 							<td>98616546151</td>
 							<td>
 								<a href="#" class="btn btn-table btn-view">View</a>
-								<a data-toggle="modal" data-target="" data-id="" class="btn btn-table btn-edit">Edit</a>
+								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
 							</td>
 						</tr>
