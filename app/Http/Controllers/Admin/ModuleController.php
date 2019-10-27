@@ -16,7 +16,13 @@ class ModuleController extends Controller
 
 		return view('page.admin.module.add');
 	}
-
+	
+	public function moduleAdded(Request $request){
+		
+		
+		return view('page.admin.module.add');
+	}
+	
     public function moduleEdit(){
 
 		return view('page.admin.module.edit');

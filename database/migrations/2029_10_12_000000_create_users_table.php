@@ -21,14 +21,14 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('name');
             $table->string('password')->nullable();
-            $table->unsignedInteger('exam_status_id')->nullable();
+            
             $table->unsignedInteger('role_id')->nullable();
+            $table->foreign('role_id')->references('id')->on('role');
+            
             $table->rememberToken();
             $table->timestamps();
-
-            $table->foreign('exam_status_id')->references('id')->on('user_exam_status');
-            $table->foreign('role_id')->references('id')->on('role');
         });
+        
         Schema::enableForeignKeyConstraints();
 
         DB::table('users')->insert([
