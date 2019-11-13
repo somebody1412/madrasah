@@ -220,6 +220,10 @@ td button.btn-table, td input.btn-table, td a.btn-table {
 	box-shadow: none;
 }
 
+table.table td{
+    vertical-align: middle;
+}
+
 a.pagination {
     margin: 0px 5px;
     padding: 5px 13px;
