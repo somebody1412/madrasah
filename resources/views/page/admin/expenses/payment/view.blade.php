@@ -81,7 +81,7 @@
 							<td>WebSoho</td>
 							<td>Tuition Fees</td>
 							<td>5129874154</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/expenses/payment/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -93,7 +93,7 @@
 							<td>Telaga Biru</td>
 							<td>Tuition Fees</td>
 							<td>68746354135</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/expenses/payment/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -105,7 +105,7 @@
 							<td>Dutch Lady</td>
 							<td>Tuition Fees</td>
 							<td>98616546151</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/expenses/payment/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>

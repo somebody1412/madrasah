@@ -81,7 +81,7 @@
 			                <td>0126549872</td>
 			                <td>1 Bill</td>
 			                <td class="text-danger">Overdue</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -93,7 +93,7 @@
 			                <td>015254651</td>
 			                <td>No</td>
 			                <td class="text-success">Paid</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -105,7 +105,7 @@
 			                <td>0154164632</td>
 			                <td>1 Bill</td>
 			                <td class="text-warning">Pending</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>

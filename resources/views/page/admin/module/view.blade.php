@@ -79,10 +79,10 @@
 			                <td>{{$module->course}}</td>
 							<td>{{$module->title}}</td>
 			                <td>{{$module->description}}</td>
-			                <td>
+			                <td class="text-center">
+                                    {!! Form::open(['route' => 'dashboard.module.delete', 'files' => true]) !!}
 			                    <a href="/{{$module->file_url}}" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/module/edit/{{$module->id}}" class="btn btn-table btn-edit">Edit</a>
-								{!! Form::open(['route' => 'dashboard.module.delete', 'files' => true]) !!}
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
 								<input type="hidden" name="id" value="{{$module->id}}">
 								{!! Form::close() !!}
