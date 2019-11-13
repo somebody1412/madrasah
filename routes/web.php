@@ -68,7 +68,10 @@ Route::group(['namespace' => 'Admin'],function () {
 		Route::group(['prefix'=>'module','as'=>'module.'],function(){
 			Route::get('/',['as'=>'index','uses'=>'ModuleController@moduleIndex']);
 			Route::get('/add',['as'=>'add','uses'=>'ModuleController@moduleAdd']);
-			Route::get('/edit',['as'=>'edit','uses'=>'ModuleController@moduleEdit']);
+			Route::post('/store',['as'=>'store','uses'=>'ModuleController@moduleStore']);
+			Route::get('/edit/{id}',['as'=>'edit','uses'=>'ModuleController@moduleEdit']);
+			Route::post('/update',['as'=>'update','uses'=>'ModuleController@moduleUpdate']);
+			Route::post('/delete',['as'=>'delete','uses'=>'ModuleController@moduleDelete']);
 		});
 
 	});

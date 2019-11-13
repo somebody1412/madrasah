@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateModulesTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,21 @@ class CreateModulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('course');
-            $table->string('title');
-            $table->longText('description');
-            $table->string('file_url');
+            $table->string('name');
             $table->timestamps();
         });
+        DB::table('roles')->insert([
+            [
+              'id'=>'1',
+              'name'=>'Admin',
+            ],
+            [
+                'id'=>'2',
+                'name'=>'Customer',
+            ],
+          ]);
     }
 
     /**
@@ -30,6 +37,6 @@ class CreateModulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('roles');
     }
 }
