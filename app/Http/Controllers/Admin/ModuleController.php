@@ -8,8 +8,17 @@ use App\Models\Module;
 
 class ModuleController extends Controller
 {
-    public function moduleIndex(){
-		$modules = Module::all();
+    public function moduleIndex(Request $request){
+		$searchQuery = $request->input("query");
+		$modules = Module::orderBy('created_at','DESC');
+		if ($searchQuery) {
+            $modules = $modules->where(function ($query) use ($searchQuery) {
+                $query->where('course', 'like', "%$searchQuery%")
+                ->orWhere('title', 'like', "%$searchQuery%")
+                ->orWhere('description', 'like', "%$searchQuery%");
+            });
+		}
+		$modules =$modules->get();
 		return view('page.admin.module.view',compact('modules'));
 	}
 

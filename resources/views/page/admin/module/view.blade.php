@@ -18,12 +18,13 @@
 		</h4>
 
 		<form class="d-flex justify-content-center">
+		{{ Form::open(array('method' =>'GET')) }}
 			<!-- Default input -->
-			<input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
+			<input type="search" name="query" placeholder="Type your query" aria-label="Search" class="form-control">
 			<button class="btn btn-primary" type="submit">
 				<i class="fa fa-search"></i>
 			</button>
-
+		{!! Form::close() !!}
 		</form>
 
 	</div>
