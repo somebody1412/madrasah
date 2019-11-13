@@ -18,12 +18,13 @@
 		</h4>
 
 		<form class="d-flex justify-content-center">
+		{{ Form::open(array('method' =>'GET')) }}
 			<!-- Default input -->
-			<input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
+			<input type="search" name="query" placeholder="Type your query" aria-label="Search" class="form-control">
 			<button class="btn btn-primary" type="submit">
 				<i class="fa fa-search"></i>
 			</button>
-
+		{!! Form::close() !!}
 		</form>
 
 	</div>
@@ -66,8 +67,6 @@
 							<th>Course</th>
 							<th>Title</th>
 							<th>Description</th>
-							<th>e-notes</th>
-							<th>Status</th>
 							<th class="text-center">Action</th>
 						</tr>
 					</thead>
@@ -75,42 +74,21 @@
 
 					<!-- Table body -->
 					<tbody>
+						@foreach($modules as $module)
 			            <tr>
-			                <td>Mathematics</td>
-							<td>Counting Objects</td>
-			                <td>A module that assists the teaching of counting objects for kids from 4 to 5 years old.</td>
-			                <td>Available</td>
-			                <td class="text-success">Active</td>
+			                <td>{{$module->course}}</td>
+							<td>{{$module->title}}</td>
+			                <td>{{$module->description}}</td>
 			                <td>
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
+			                    <a href="/{{$module->file_url}}" class="btn btn-table btn-view">View</a>
+								<a href="/dashboard/module/edit/{{$module->id}}" class="btn btn-table btn-edit">Edit</a>
+								{!! Form::open(['route' => 'dashboard.module.delete', 'files' => true]) !!}
+								<button type="button" class="btn btn-table btn-delete">Delete</button>
+								<input type="hidden" name="id" value="{{$module->id}}">
+								{!! Form::close() !!}
 			                </td>
-			            </tr>
-			            <tr>
-			                <td>Bahasa Melayu</td>
-							<td>Haiwan</td>
-			                <td>A module that assists the teaching of recognizing objects for kids from 4 to 5 years old.</td>
-			                <td>Available</td>
-			                <td class="text-danger">Inactive</td>
-			                <td>
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
-			            <tr>
-			                <td>English Language</td>
-							<td>People</td>
-			                <td>A module that assists the teaching of recognizing people for kids from 4 to 5 years old.</td>
-			                <td>Unavailable</td>
-			                <td class="text-danger">Inactive</td>
-			                <td>
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/module/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
+						</tr>
+						@endforeach
 					</tbody>
 					<!-- Table body -->
 

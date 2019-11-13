@@ -42,7 +42,7 @@
 
 			<!--Card content-->
 			<div class="card-body">
-
+			{!! Form::open(['route' => 'dashboard.module.store', 'files' => true]) !!}
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
@@ -55,13 +55,13 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Course</label>
-							<input type="text" name="name" class="form-control" />
+							<input type="text" name="course" class="form-control" />
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Title</label>
-							<input type="text" name="amount" class="form-control" />
+							<input type="text" name="title" class="form-control" />
 						</div>
 					</div>
 				</div>
@@ -69,7 +69,7 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">Description</label>
-							<textarea class="form-control" placeholder="Enter Description" rows="3"></textarea>
+							<textarea name='description' class="form-control" placeholder="Enter Description" rows="3"></textarea>
 						</div>
 					</div>
 				</div>
@@ -77,17 +77,17 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">e-notes</label>
-							<input type="file" name="amount" class="form-control" />
+							<input type="file" name="file" class="form-control" />
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<a href="/dashboard/income/customer" class="btn btn-success">Save</a>
+						{!! Form::submit('Save',['class'=>'btn btn-success']) !!}
 						<button class="btn btn-light">Cancel</button>
 					</div>
 				</div>
-
+			{!! Form::close() !!}
 			</div>
 
 		</div>
