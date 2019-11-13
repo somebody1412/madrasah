@@ -16,8 +16,8 @@ class WebController extends Controller
         return view('page.web.feature');
     }
 
-    public function about()
+    public function elearning()
     {
-        return view('page.web.about');
+        return view('page.web.elearning');
     }
 }

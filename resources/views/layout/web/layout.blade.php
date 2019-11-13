@@ -27,7 +27,7 @@
 					<div id="intro">
 						<h1>This is<br />
 						TASNIM</h1>
-						<p>A fully operational, user friendly pre-school system engineered by <a href="https://twitter.com/ajlkn">WebSoho</a><br> for the usage of parents and teachers from all registered pre-school and kindergarden.</p>
+						<p>A fully operational, user friendly pre-school system engineered by <a target="_blank" href="https://webforsoho.com/">WebForSOHO</a><br> for the usage of parents and teachers from all registered pre-school and kindergarden.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -42,14 +42,14 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="{{(\Route::current()->getName() == 'web')?'active':''}}"><a href="/">Introduction</a></li>
-							<li class="{{(\Route::current()->getName() == 'feature')?'active':''}}"><a href="/feature">Features</a></li>
-							<li class="{{(\Route::current()->getName() == 'about')?'active':''}}"><a href="/about">About</a></li>
+							<li class="{{(\Route::current()->getName() == 'feature')?'active':''}}"><a href="/feature">Services</a></li>
+							<li class="{{(\Route::current()->getName() == 'elearning')?'active':''}}"><a href="/elearning">e-Learning</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a target="_blank" href="https://twitter.com/webforsoho" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a target="_blank" href="https://facebook.com/webforsoho" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/webforsoho/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/in/web-for-soho-solution-9b4411179/" class="icon brands fa-linkedin-in"><span class="label">Linked In</span></a></li>
 						</ul>
 					</nav>
 
@@ -81,24 +81,23 @@
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
+								<p>2.4 , Kompleks Perniagaan MARA, Jln Stesyen Off Jln Langgar, 05150 Alor Setar, Kedah, Malaysia.</p>
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
+								<p><a target="_blank" href="#">+ (60) 18-376-1700</a></p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a target="_blank" href="mailto:support@webforsoho.com">support@webforsoho.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a target="_blank" href="https://twitter.com/webforsoho" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a target="_blank" href="https://facebook.com/webforsoho" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a target="_blank" href="https://www.instagram.com/webforsoho/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a target="_blank" href="https://www.linkedin.com/in/web-for-soho-solution-9b4411179/" class="icon brands alt fa-linkedin-in"><span class="label">Linked In</span></a></li>
 								</ul>
 							</section>
 						</section>

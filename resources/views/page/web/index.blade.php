@@ -15,13 +15,12 @@
             <span class="date">Welcome to TASNIM</span>
             <h2><a href="#">A complete<br />
                     Preschool System</a></h2>
-            <p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-                facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-                amet nullam sed etiam veroeros.</p>
+            <p>A fully operational, user friendly pre-school system equipped with statistical dashboard with records on expenses, income and the ability to store e-module. It also provides the ability to manage staffs and students and it is perfectly built to suit the need of a management system for pre-school and kindergarden.
+            </p>
         </header>
         <a href="#" class="image main"><img src="/img/web/pic01.jpg" alt="" /></a>
         <ul class="actions special">
-            <li><a href="#" class="button large">Learn More</a></li>
+            <li><a href="/feature#header" class="button large">Learn More</a></li>
         </ul>
     </article>
 
