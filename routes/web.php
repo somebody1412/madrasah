@@ -12,10 +12,13 @@
 */
 
 
+Route::get('/', ['as'=>'web', 'uses'=>'WebController@index']);
+Route::get('/feature', ['as'=>'feature', 'uses'=>'WebController@feature']);
+Route::get('/about', ['as'=>'about', 'uses'=>'WebController@about']);
 
 Route::group(['namespace' => 'Admin'],function () {
-	Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
-	Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
+	// Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
+	// Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
 	Route::group(['prefix'=>'dashboard', 'as'=>'dashboard.'],function(){
 		Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);

@@ -166,12 +166,13 @@
 // Line
 var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
-	type: 'bar',
+    type: 'bar',
+    height: '100%',
 	data: {
-		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+		labels: ["March", "April", "May", "June", "July", "August"],
 		datasets: [{
-			label: '# of Votes',
-			data: [12, 19, 3, 5, 2, 3],
+			label: '# of Students',
+			data: [10, 11, 11, 12, 10, 9],
 			backgroundColor: [
 				'rgba(255, 99, 132, 0.2)',
 				'rgba(54, 162, 235, 0.2)',
@@ -207,7 +208,7 @@ var ctxP = document.getElementById("pieChart").getContext('2d');
 var myPieChart = new Chart(ctxP, {
 	type: 'pie',
 	data: {
-		labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+		labels: ["March", "April", "May", "June", "July"],
 		datasets: [{
 			data: [300, 50, 100, 40, 120],
 			backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
