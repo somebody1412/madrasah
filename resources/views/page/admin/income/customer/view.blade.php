@@ -66,51 +66,25 @@
 							<th>Name</th>
 							<th>Email</th>
 							<th>Phone</th>
-							<th>Unpaid</th>
-							<th>Status</th>
 							<th class="text-center">Action</th>
 						</tr>
 					</thead>
 					<!-- Table head -->
 
-					<!-- Table body -->
+					<!-- Table body -->s
 					<tbody>
+						@foreach( $customers as $customer)
 			            <tr>
-			                <td>Shawn Mendez</td>
-							<td>shawnmendez@gmail.com</td>
-			                <td>0126549872</td>
-			                <td>1 Bill</td>
-			                <td class="text-danger">Overdue</td>
+			                <td>{{$customer->name}}</td>
+							<td>{{$customer->email}}</td>
+			                <td>{{$customer->phone}}</td>
 			                <td>
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/income/customer/edit/{{$customer->id}}" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
-			            </tr>
-			            <tr>
-			                <td>Camilla Cabello</td>
-							<td>camillaxoxo@gmail.com</td>
-			                <td>015254651</td>
-			                <td>No</td>
-			                <td class="text-success">Paid</td>
-			                <td>
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
-			            <tr>
-			                <td>Anne Marie</td>
-							<td>anne.marie@gmail.com</td>
-			                <td>0154164632</td>
-			                <td>1 Bill</td>
-			                <td class="text-warning">Pending</td>
-			                <td>
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/customer/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
+						</tr>
+						@endforeach
 					</tbody>
 					<!-- Table body -->
 

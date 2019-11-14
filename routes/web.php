@@ -38,7 +38,8 @@ Route::group(['namespace' => 'Admin'],function () {
 			Route::group(['prefix'=>'customer','as'=>'customer.'],function(){
 				Route::get('/',['as'=>'index','uses'=>'IncomeController@customerIndex']);
 				Route::get('/add',['as'=>'add','uses'=>'IncomeController@customerAdd']);
-				Route::get('/edit',['as'=>'edit','uses'=>'IncomeController@customerEdit']);
+				Route::post('/store',['as'=>'store','uses'=>'IncomeController@customerStore']);
+				Route::get('/edit/{id}',['as'=>'edit','uses'=>'IncomeController@customerEdit']);
 			});
 
 		});
