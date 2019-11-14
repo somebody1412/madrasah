@@ -44,7 +44,7 @@ class ModuleController extends Controller
 				request()->file->move(public_path('storage/module/'), $fileName);
 				
 			} catch (Exception $e) {
-				return redirect()->back()->with('error','File cant upload');
+				return redirect()->back()->with('err','File cant upload');
 			}
 		$module = new Module;
 		$module->course = $request->course;
@@ -71,7 +71,7 @@ class ModuleController extends Controller
 		$module = Module::find($request->id);
 
 		if(!$module){
-			return redirect()->back()->with('error','Module not available');
+			return redirect()->back()->with('err','Module not available');
 		}
 
 		if($request->hasFile('image')) {
@@ -83,7 +83,7 @@ class ModuleController extends Controller
 				request()->file->move(public_path('storage/module/'), $fileName);
 				$module->file_url = $path;
 			} catch (Exception $e) {
-				return redirect()->back()->with('error','File cant upload');
+				return redirect()->back()->with('err','File cant upload');
 			}
 		}
 
@@ -100,7 +100,7 @@ class ModuleController extends Controller
 
 		$module = Module::find($request->id);
 		if(!$module){
-			return redirect()->back()->with('error','Module not available');
+			return redirect()->back()->with('err','Module not available');
 		}
 
 		$module->delete();

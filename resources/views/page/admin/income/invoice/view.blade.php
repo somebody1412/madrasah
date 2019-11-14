@@ -83,7 +83,7 @@
 			                <td>22/06/2019</td>
 			                <td>21/07/2019</td>
 			                <td class="text-danger">Overdue</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -96,7 +96,7 @@
 			                <td>22/06/2019</td>
 			                <td>21/07/2019</td>
 			                <td class="text-success">Paid</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -109,7 +109,7 @@
 			                <td>12/07/2019</td>
 			                <td>11/08/2019</td>
 			                <td class="text-warning">Unpaid</td>
-			                <td>
+			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>

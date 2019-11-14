@@ -61,7 +61,7 @@
 
 			<!-- Card header -->
 			<div class="card-header text-center">
-				Pie chart
+				Expenses
 			</div>
 
 			<!--Card content-->
@@ -82,23 +82,23 @@
 
 				<!-- List group links -->
 				<div class="list-group list-group-flush">
-					<a class="list-group-item list-group-item-action waves-effect">Sales
+					<a class="list-group-item list-group-item-action waves-effect">Income
 						<span class="badge badge-success badge-pill pull-right">22%
 							<i class="fa fa-arrow-up ml-1"></i>
 						</span>
 					</a>
-					<a class="list-group-item list-group-item-action waves-effect">Traffic
+					<a class="list-group-item list-group-item-action waves-effect">Staffs
 						<span class="badge badge-danger badge-pill pull-right">5%
 							<i class="fa fa-arrow-down ml-1"></i>
 						</span>
 					</a>
-					<a class="list-group-item list-group-item-action waves-effect">Orders
+					<a class="list-group-item list-group-item-action waves-effect">Students
 						<span class="badge badge-primary badge-pill pull-right">14</span>
 					</a>
-					<a class="list-group-item list-group-item-action waves-effect">Issues
+					<a class="list-group-item list-group-item-action waves-effect">Modules
 						<span class="badge badge-primary badge-pill pull-right">123</span>
 					</a>
-					<a class="list-group-item list-group-item-action waves-effect">Messages
+					<a class="list-group-item list-group-item-action waves-effect">Notice
 						<span class="badge badge-primary badge-pill pull-right">8</span>
 					</a>
 				</div>
@@ -133,9 +133,9 @@
 					<thead class="blue-grey lighten-4">
 						<tr>
 							<th>#</th>
-							<th>Lorem</th>
-							<th>Ipsum</th>
-							<th>Dolor</th>
+							<th>Customer</th>
+							<th>Amount</th>
+							<th>Status</th>
 						</tr>
 					</thead>
 					<!-- Table head -->
@@ -188,9 +188,9 @@
 					<thead class="blue lighten-4">
 						<tr>
 							<th>#</th>
-							<th>Lorem</th>
-							<th>Ipsum</th>
-							<th>Dolor</th>
+							<th>Vendor</th>
+							<th>Amount</th>
+							<th>Status</th>
 						</tr>
 					</thead>
 					<!-- Table head -->

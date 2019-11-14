@@ -78,13 +78,17 @@
 			                <td>{{$customer->name}}</td>
 							<td>{{$customer->email}}</td>
 			                <td>{{$customer->phone}}</td>
-			                <td>
+			                <td class="text-center">
+							{!! Form::open(['route' => 'dashboard.income.customer.delete', 'files' => true]) !!}
 			                    <a href="#" class="btn btn-table btn-view">View</a>
 			                    <a href="/dashboard/income/customer/edit/{{$customer->id}}" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
+								<button type="button" class="btn btn-table btn-delete">Delete</button>
+                                <input type="hidden" name="id" value="{{$customer->id}}">
+                                {!! Form::close() !!}
 			                </td>
 						</tr>
 						@endforeach
+
 					</tbody>
 					<!-- Table body -->
 

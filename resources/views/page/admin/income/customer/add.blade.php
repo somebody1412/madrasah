@@ -44,7 +44,7 @@
 
 			<!--Card content-->
 			<div class="card-body">
-
+			{!! Form::open(['route' => 'dashboard.income.customer.store', 'files' => true]) !!}
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
@@ -63,7 +63,7 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Email</label>
-							<input type="email" name="amount" class="form-control" />
+							<input type="email" name="email" class="form-control" />
 						</div>
 					</div>
 				</div>
@@ -71,16 +71,15 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Tax Number</label>
-							<input type="text" name="amount" class="form-control" />
+							<input type="text" name="tax_no" class="form-control" />
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Currency</label>
-							<select class="form-control" name="customer">
-								<option>Malaysian Ringgit</option>
-								<option>Singapore Dollar</option>
-								<option>Add new currency +</option>
+							<select class="form-control" name="currency">
+								<option value='MYR' selected="selected">Malaysian Ringgit</option>
+								<option value='SGD'>Singapore Dollar</option>
 							</select>
 						</div>
 					</div>
@@ -89,13 +88,13 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Phone</label>
-							<input type="text" name="name" class="form-control" />
+							<input type="text" name="phone" class="form-control" />
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Website</label>
-							<input type="text" name="amount" class="form-control" />
+							<input type="text" name="website" class="form-control" />
 						</div>
 					</div>
 				</div>
@@ -103,17 +102,17 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">Address</label>
-							<textarea class="form-control" placeholder="Enter Address" rows="3"></textarea>
+							<textarea class="form-control" name="address" placeholder="Enter Address" rows="3"></textarea>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<a href="/dashboard/income/customer" class="btn btn-success">Save</a>
+					{!! Form::submit('Save',['class'=>'btn btn-success']) !!}
 						<button class="btn btn-light">Cancel</button>
 					</div>
 				</div>
-
+				{!! Form::close() !!}
 			</div>
 
 		</div>

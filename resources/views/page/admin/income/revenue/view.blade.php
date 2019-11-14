@@ -81,7 +81,7 @@
 							<td>Shawn Mendez</td>
 							<td>Tuition Fees</td>
 							<td>5129874154</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -93,7 +93,7 @@
 							<td>Camilla Cabello</td>
 							<td>Tuition Fees</td>
 							<td>68746354135</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
@@ -105,7 +105,7 @@
 							<td>Anne Marie</td>
 							<td>Tuition Fees</td>
 							<td>98616546151</td>
-							<td>
+							<td class="text-center">
 								<a href="#" class="btn btn-table btn-view">View</a>
 								<a href="/dashboard/income/revenue/edit" class="btn btn-table btn-edit">Edit</a>
 								<button type="button" class="btn btn-table btn-delete">Delete</button>
