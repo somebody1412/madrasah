@@ -71,7 +71,7 @@
 					</thead>
 					<!-- Table head -->
 
-					<!-- Table body -->s
+					<!-- Table body -->
 					<tbody>
 						@foreach( $customers as $customer)
 			            <tr>
