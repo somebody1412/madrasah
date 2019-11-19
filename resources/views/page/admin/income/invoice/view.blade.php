@@ -18,11 +18,13 @@
 		</h4>
 
 		<form class="d-flex justify-content-center">
-			<!-- Default input -->
-			<input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
-			<button class="btn btn-primary" type="submit">
-				<i class="fa fa-search"></i>
-			</button>
+			{{ Form::open(array('method' =>'GET')) }}
+            <!-- Default input -->
+            <input type="search" name="query" placeholder="Type your query" aria-label="Search" class="form-control">
+            <button class="btn btn-primary" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+            {!! Form::close() !!}
 
 		</form>
 
@@ -76,45 +78,21 @@
 
 					<!-- Table body -->
 					<tbody>
+						@foreach($invoices as $invoice)
 			            <tr>
-			                <td>000001</td>
-			                <td>Shawn Mendez</td>
-			                <td>RM350</td>
-			                <td>22/06/2019</td>
-			                <td>21/07/2019</td>
+			                <td>{{$invoice->id}}</td>
+			                <td>{{$invoice->customer->name}}</td>
+			                <td>{{$invoice->total}}</td>
+			                <td>{{$invoice->invoice_date}}</td>
+			                <td>{{$invoice->due_date}}</td>
 			                <td class="text-danger">Overdue</td>
 			                <td class="text-center">
 			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
+			                    <a href="/dashboard/income/invoice/edit/{{$invoice->id}}" class="btn btn-table btn-edit">Edit</a>
 			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
 			                </td>
-			            </tr>
-			            <tr>
-			                <td>000002</td>
-			                <td>Camilla Cabello</td>
-			                <td>RM350</td>
-			                <td>22/06/2019</td>
-			                <td>21/07/2019</td>
-			                <td class="text-success">Paid</td>
-			                <td class="text-center">
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
-			            <tr>
-			                <td>000003</td>
-			                <td>Anne Marie</td>
-			                <td>RM350</td>
-			                <td>12/07/2019</td>
-			                <td>11/08/2019</td>
-			                <td class="text-warning">Unpaid</td>
-			                <td class="text-center">
-			                    <a href="#" class="btn btn-table btn-view">View</a>
-			                    <a href="/dashboard/income/invoice/edit" class="btn btn-table btn-edit">Edit</a>
-			                    <button type="button" class="btn btn-table btn-delete">Delete</button>
-			                </td>
-			            </tr>
+						</tr>
+						@endforeach
 					</tbody>
 					<!-- Table body -->
 

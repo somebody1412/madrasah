@@ -44,7 +44,7 @@
 
 			<!--Card content-->
 			<div class="card-body">
-
+			{!! Form::open(['route' => 'dashboard.income.invoice.update', 'files' => true]) !!}
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
@@ -58,9 +58,9 @@
 						<div class="form-group">
 							<label class="control-label">Customer</label>
 							<select class="form-control" name="customer">
-								<option>Shawn Mendez</option>
-								<option>Camilla Cabello</option>
-								<option>Anne Marie</option>
+								@foreach( $customers as $customer)
+								<option value="{{$customer->id}}" {{($customer->id == $invoice->customer_id)? "selected":""}}>{{$customer->name}}</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
@@ -68,8 +68,8 @@
 						<div class="form-group">
 							<label class="control-label">Currency</label>
 							<select class="form-control" name="currency">
-								<option>Malaysian Ringgit (MYR)</option>
-								<option>Singapore Dollar (SGD)</option>
+								<option value="MYR" {{($invoice->currency == "MYR")?"selected":""}}>Malaysian Ringgit (MYR)</option>
+								<option value="SGD" {{($invoice->currency == "SGD")?"selected":""}}>Singapore Dollar (SGD)</option>
 							</select>
 						</div>
 					</div>
@@ -78,13 +78,13 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Invoice Date</label>
-							<input type="date" name="invoice-date" class="form-control" />
+							<input type="date" name="invoice-date" class="form-control" value="{{$invoice->invoice_date}}"/>
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Due Date</label>
-							<input type="date" name="due-date" class="form-control" />
+							<input type="date" name="due-date" class="form-control" value="{{$invoice->due_date}}" />
 						</div>
 					</div>
 				</div>

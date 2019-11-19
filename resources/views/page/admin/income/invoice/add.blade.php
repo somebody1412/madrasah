@@ -44,7 +44,7 @@
 
 			<!--Card content-->
 			<div class="card-body">
-
+			{!! Form::open(['route' => 'dashboard.income.invoice.store', 'files' => true]) !!}
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
@@ -58,9 +58,9 @@
 						<div class="form-group">
 							<label class="control-label">Customer</label>
 							<select class="form-control" name="customer">
-								<option>Shawn Mendez</option>
-								<option>Camilla Cabello</option>
-								<option>Anne Marie</option>
+								@foreach( $customers as $customer)
+								<option value="{{$customer->id}}">{{$customer->name}}</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
@@ -68,8 +68,8 @@
 						<div class="form-group">
 							<label class="control-label">Currency</label>
 							<select class="form-control" name="currency">
-								<option>Malaysian Ringgit (MYR)</option>
-								<option>Singapore Dollar (SGD)</option>
+								<option value="MYR" selected="selected">Malaysian Ringgit (MYR)</option>
+								<option value="SGD" >Singapore Dollar (SGD)</option>
 							</select>
 						</div>
 					</div>
@@ -78,13 +78,13 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Invoice Date</label>
-							<input type="date" name="invoice-date" class="form-control" />
+							<input type="date" name="invoice_date" class="form-control" />
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Due Date</label>
-							<input type="date" name="due-date" class="form-control" />
+							<input type="date" name="due_date" class="form-control" />
 						</div>
 					</div>
 				</div>
@@ -92,13 +92,13 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Invoice Number</label>
-							<input type="text" name="invoice-no" class="form-control" />
+							<input type="text" name="invoice_no" class="form-control" />
 						</div>
 					</div>
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Order Number</label>
-							<input type="text" name="order-no" class="form-control" />
+							<input type="text" name="order_no" class="form-control" />
 						</div>
 					</div>
 				</div>
@@ -110,9 +110,8 @@
 								<div class="form-group">
 									<label class="control-label">Name</label>
 									<select class="form-control" name="item">
-										<option>Fee Payment</option>
-										<option>Bill Payment</option>
-										<option>Add New Item +</option>
+										<option value="fee" >Fee Payment</option>
+										<option value="bill">Bill Payment</option>
 									</select>
 								</div>
 							</div>
@@ -124,7 +123,7 @@
 									</div>
 									<div class="col-4">
 										<label class="control-label w-100 text-right">Price</label>
-										<input type="text" name="price" placeholder="RM0.00" class="form-control"/>
+										<input type="number" min=0.00 name="price" placeholder="RM0.00" class="form-control"/>
 									</div>
 									<div class="col-2">
 										<label class="control-label w-100 text-right">Tax</label>
@@ -132,7 +131,7 @@
 									</div>
 									<div class="col-4">
 										<label class="control-label w-100 text-right">Total</label>
-										<input type="text" name="total" placeholder="0" class="form-control"/>
+										<input type="number" min=0.00 name="total" placeholder="0" class="form-control"/>
 									</div>
 								</div>
 							</div>
@@ -144,7 +143,7 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">Notes</label>
-							<textarea class="form-control" placeholder="Enter Notes" rows="3"></textarea>
+							<textarea class="form-control" name="notes" placeholder="Enter Notes" rows="3"></textarea>
 						</div>
 					</div>
 				</div>
@@ -153,9 +152,8 @@
 						<div class="form-group">
 							<label class="control-label">Category</label>
 							<select class="form-control" name="category">
-								<option>Fee Payment</option>
-								<option>Bill Payment</option>
-								<option>Add New Item +</option>
+								<option value="fee">Fee Payment</option>
+								<option value="bill">Bill Payment</option>
 							</select>
 						</div>
 					</div>
@@ -163,10 +161,9 @@
 						<div class="form-group">
 							<label class="control-label">Recurring</label>
 							<select class="form-control" name="recurring">
-								<option>No</option>
-								<option>Daily</option>
-								<option>Monthly</option>
-								<option>Add New Item +</option>
+								<option value="no">No</option>
+								<option value="daily">Daily</option>
+								<option value="monthly">Monthly</option>
 							</select>
 						</div>
 					</div>
@@ -175,17 +172,17 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">Attachment</label>
-							<input type="file" class="form-control" />
+							<input type="file" name="file" class="form-control" />
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-12">
-						<a href="/dashboard/income/invoice" class="btn btn-success">Save</a>
+					{!! Form::submit('Save',['class'=>'btn btn-success']) !!}
 						<button class="btn btn-light">Cancel</button>
 					</div>
 				</div>
-
+				{!! Form::close() !!}
 			</div>
 
 		</div>
