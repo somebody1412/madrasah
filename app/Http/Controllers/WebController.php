@@ -20,4 +20,9 @@ class WebController extends Controller
     {
         return view('page.web.elearning');
     }
+
+    public function register()
+    {
+        return view('page.web.register');
+    }
 }

@@ -44,12 +44,10 @@
 							<li class="{{(\Route::current()->getName() == 'web')?'active':''}}"><a href="/">Introduction</a></li>
 							<li class="{{(\Route::current()->getName() == 'feature')?'active':''}}"><a href="/feature">Services</a></li>
 							<li class="{{(\Route::current()->getName() == 'elearning')?'active':''}}"><a href="/elearning">e-Learning</a></li>
+							<li class="{{(\Route::current()->getName() == 'register')?'active':''}}"><a href="/register">Registration</a></li>
 						</ul>
 						<ul class="icons">
-                            <li><a target="_blank" href="https://twitter.com/webforsoho" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a target="_blank" href="https://facebook.com/webforsoho" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                            <li><a target="_blank" href="https://www.instagram.com/webforsoho/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/web-for-soho-solution-9b4411179/" class="icon brands fa-linkedin-in"><span class="label">Linked In</span></a></li>
+                            <li><a target="" href="/login" class="icon solid fa-user-circle"><span class="label">Linked In</span></a></li>
 						</ul>
 					</nav>
 
