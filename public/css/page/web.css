@@ -1,4 +1,4 @@
-@import url(../plugin/fontawesome-all.min.css);
+@import url("/css/plugin/fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
 html, body, div, span, applet, object,
@@ -2325,6 +2325,7 @@ input, select, textarea {
 		}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -2345,6 +2346,7 @@ input, select, textarea {
 	}
 
 		input[type="text"]:invalid,
+		input[type="number"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		select:invalid,
@@ -2370,6 +2372,7 @@ input, select, textarea {
 		}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select {
@@ -2473,6 +2476,7 @@ input, select, textarea {
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"],
 	input[type="email"],
 	select,
@@ -2481,6 +2485,7 @@ input, select, textarea {
 	}
 
 		input[type="text"]:focus,
+		input[type="number"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		select:focus,
@@ -4038,6 +4043,7 @@ input, select, textarea {
 		}
 
 		#footer input[type="text"],
+		#footer input[type="number"],
 		#footer input[type="password"],
 		#footer input[type="email"],
 		#footer select,
@@ -4046,6 +4052,7 @@ input, select, textarea {
 		}
 
 			#footer input[type="text"]:focus,
+			#footer input[type="number"]:focus,
 			#footer input[type="password"]:focus,
 			#footer input[type="email"]:focus,
 			#footer select:focus,
