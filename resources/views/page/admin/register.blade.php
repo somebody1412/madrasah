@@ -62,7 +62,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a href="/register" class="nav-link" href="#best-features">Sign Up</a>
+						<a href="/login" class="nav-link" href="#best-features">Sign In</a>
 					</li>
 				</ul>
 				<!-- Links -->
@@ -87,20 +87,22 @@
 					<div class="col-md-10 login-form">
 
 						<!-- Heading -->
-						<h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Login Portal</h2>
+						<h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Sign Up Portal</h2>
 
 						<!-- Divider -->
 						<hr class="hr-light">
-						<form action="/login" method="POST">
+						<form action="/register" method="POST">
 						@csrf
 							<!-- Material input -->
 							<div class="md-form">
+								<input type="text" name="nric" class="form-control mb-3" placeholder="No Kad Pengenalan">
+								<input type="text" name="name" class="form-control mb-3" placeholder="Nama Penuh">
 								<input type="email" name="email" class="form-control mb-3" placeholder="Email">
 								<input type="password" name="password" class="form-control" placeholder="Password">
 							</div>
 	
 	
-							<input type="submit" class="btn btn-outline-white btn-login mb-5" value='Log In'>
+							<input type="submit" class="btn btn-outline-white btn-login mb-5" value='Sign Up'>
 							
 
 						</form>

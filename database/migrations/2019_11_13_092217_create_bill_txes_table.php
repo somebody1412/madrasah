@@ -14,9 +14,9 @@ class CreateBillTxesTable extends Migration
     public function up()
     {
         Schema::create('bill_txes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             
-            $table->unsignedInteger('vendor_id');
+            $table->unsignedBigInteger('vendor_id');
             $table->foreign('vendor_id')->references('id')->on('vendors');
             
             $table->string('currency')->default('MYR');

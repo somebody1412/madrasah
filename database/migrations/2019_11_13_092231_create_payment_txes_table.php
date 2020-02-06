@@ -14,13 +14,13 @@ class CreatePaymentTxesTable extends Migration
     public function up()
     {
         Schema::create('payment_txes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             
             $table->dateTime('date')->nullable();
             $table->decimal('amount')->nullable();
             $table->string('account')->nullable();
 
-            $table->unsignedInteger('vendor_id');
+            $table->unsignedBigInteger('vendor_id');
             $table->foreign('vendor_id')->references('id')->on('vendors');
             
             $table->longText('description')->nullable();

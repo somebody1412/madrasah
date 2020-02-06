@@ -17,71 +17,29 @@ Route::get('/feature', ['as'=>'feature', 'uses'=>'WebController@feature']);
 Route::get('/elearning', ['as'=>'elearning', 'uses'=>'WebController@elearning']);
 Route::get('/register', ['as'=>'register', 'uses'=>'WebController@register']);
 
-Route::group(['namespace' => 'Admin'],function () {
-	Route::get('/login', ['uses'=>"AuthController@index",'as'=>'index']);
-	Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
+Route::get('/login', ['uses'=>"AuthController@index",'as'=>'index']);
+Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
-	Route::group(['prefix'=>'dashboard', 'as'=>'dashboard.'],function(){
-		Route::get('/', ['as'=>'home', 'uses'=>'HomeController@index']);
-		Route::get('/logout',['as'=>'logout','uses'=>'AuthController@logout']);
+Route::get('/register', ['uses'=>"AuthController@indexRegister"]);
+Route::post('/register', ['uses'=>"AuthController@register"]);
 
-		Route::group(['prefix'=>'income','as'=>'income.'],function(){
+Route::get('/dashboard', ['as'=>'home', 'uses'=>'DashboardController@index'])->middleware('auth');
+Route::get('/logout',['as'=>'logout','uses'=>'AuthController@logout']);
 
-			Route::group(['prefix'=>'invoice','as'=>'invoice.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@invoiceIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'IncomeController@invoiceAdd']);
-				Route::post('/store',['as'=>'store','uses'=>'IncomeController@invoiceStore']);
-				Route::get('/edit/{id}',['as'=>'edit','uses'=>'IncomeController@invoiceEdit']);
-				Route::post('/update',['as'=>'update','uses'=>'IncomeController@invoiceUpdate']);
-			});
+Route::get('/user/pelajar', ['as'=>'user.pelajar', 'uses'=>'ParentController@student'])->middleware('auth');
 
-			Route::group(['prefix'=>'revenue','as'=>'revenue.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@revenueIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'IncomeController@revenueAdd']);
-				Route::get('/edit',['as'=>'edit','uses'=>'IncomeController@revenueEdit']);
-			});
+Route::get('/user/pelajar/add', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentAdd'])->middleware('auth');
+Route::post('/user/pelajar/store', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentStore'])->middleware('auth');
+Route::get('/user/pelajar/edit/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentEdit'])->middleware('auth');
+Route::post('/user/pelajar/update', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentUpdate'])->middleware('auth');
 
-			Route::group(['prefix'=>'customer','as'=>'customer.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'IncomeController@customerIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'IncomeController@customerAdd']);
-				Route::post('/store',['as'=>'store','uses'=>'IncomeController@customerStore']);
-				Route::get('/edit/{id}',['as'=>'edit','uses'=>'IncomeController@customerEdit']);
-				Route::post('/update',['as'=>'update','uses'=>'IncomeController@customerUpdate']);
-				Route::post('/edit',['as'=>'delete','uses'=>'IncomeController@customerDelete']);
-			});
+Route::get('/user/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentExam'])->middleware('auth');
 
-		});
+Route::get('/staff/pelajar', ['as'=>'user.pelajar', 'uses'=>'StaffController@student'])->middleware('auth');
+Route::get('/staff/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExam'])->middleware('auth');
 
-		Route::group(['prefix'=>'expenses','as'=>'expenses.'],function(){
+Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubject'])->middleware('auth');
 
-			Route::group(['prefix'=>'bill','as'=>'bill.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'ExpensesController@billIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@billAdd']);
-				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@billEdit']);
-			});
-
-			Route::group(['prefix'=>'payment','as'=>'payment.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'ExpensesController@paymentIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@paymentadd']);
-				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@paymentEdit']);
-			});
-
-			Route::group(['prefix'=>'vendor','as'=>'vendor.'],function(){
-				Route::get('/',['as'=>'index','uses'=>'ExpensesController@vendorIndex']);
-				Route::get('/add',['as'=>'add','uses'=>'ExpensesController@vendorAdd']);
-				Route::get('/edit',['as'=>'edit','uses'=>'ExpensesController@vendorEdit']);
-			});
-
-		});
-
-		Route::group(['prefix'=>'module','as'=>'module.'],function(){
-			Route::get('/',['as'=>'index','uses'=>'ModuleController@moduleIndex']);
-			Route::get('/add',['as'=>'add','uses'=>'ModuleController@moduleAdd']);
-			Route::post('/store',['as'=>'store','uses'=>'ModuleController@moduleStore']);
-			Route::get('/edit/{id}',['as'=>'edit','uses'=>'ModuleController@moduleEdit']);
-			Route::post('/update',['as'=>'update','uses'=>'ModuleController@moduleUpdate']);
-			Route::post('/delete',['as'=>'delete','uses'=>'ModuleController@moduleDelete']);
-		});
-
-	});
-});
+Route::get('/staff/pelajar/exam/add/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamAdd'])->middleware('auth');
+Route::post('/staff/pelajar/exam/store', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamStore'])->middleware('auth');
+Route::post('/staff/pelajar/exam/update', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubjectStore'])->middleware('auth');

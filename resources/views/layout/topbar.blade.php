@@ -1,6 +1,6 @@
 <!-- Brand -->
 <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-	<strong class="main-text">TASNIM</strong>
+	<strong class="main-text">Madrasah</strong>
 </a>
 
 <!-- Collapse -->
@@ -39,7 +39,7 @@
 		</li>
 		<li class="nav-item">
 			<a href="#" class="nav-link border border-light rounded waves-effect" target="_blank">
-				<i class="fa fa-user mr-2"></i>Superadmin
+				<i class="fa fa-user mr-2">{{$user->name}}</i>
 			</a>
 		</li>
 	</ul>

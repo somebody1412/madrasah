@@ -14,13 +14,13 @@ class CreateRevenueTxesTable extends Migration
     public function up()
     {
         Schema::create('revenue_txes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             
             $table->dateTime('date')->nullable();
             $table->decimal('amount')->nullable();
             $table->string('account')->nullable();
 
-            $table->unsignedInteger('customer_id');
+            $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers');
             
             $table->longText('description')->nullable();

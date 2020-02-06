@@ -16,13 +16,13 @@ class CreateUsersTable extends Migration
     {
         Schema::disableForeignKeyConstraints();
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('nric')->unique();
             $table->string('email')->unique();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('password')->nullable();
             
-            $table->unsignedInteger('role_id')->nullable();
+            $table->unsignedBigInteger('role_id')->nullable();
             $table->foreign('role_id')->references('id')->on('roles');
             
             $table->rememberToken();
@@ -33,10 +33,10 @@ class CreateUsersTable extends Migration
 
         DB::table('users')->insert([
           [
-            'name'=>'superadmin',
-            'email'=>'superadmin@example.com',
-            'password'=>Hash::make(env('ADMIN_PASSWORD', 'Qwe123!@#')),
-            'role_id'=>1,
+            'name'=>'Admin',
+            'email'=>'admin@mail.com',
+            'password'=>Hash::make('test1234'),
+            'role_id'=>Role::ADMIN,
             'nric'=>'1111111111111'
           ]
         ]);

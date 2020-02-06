@@ -14,9 +14,9 @@ class CreateInvoiceTxesTable extends Migration
     public function up()
     {
         Schema::create('invoice_txes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             
-            $table->unsignedInteger('customer_id');
+            $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers');
             
             $table->string('currency')->default('MYR');
