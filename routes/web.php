@@ -26,20 +26,39 @@ Route::post('/register', ['uses'=>"AuthController@register"]);
 Route::get('/dashboard', ['as'=>'home', 'uses'=>'DashboardController@index'])->middleware('auth');
 Route::get('/logout',['as'=>'logout','uses'=>'AuthController@logout']);
 
-Route::get('/user/pelajar', ['as'=>'user.pelajar', 'uses'=>'ParentController@student'])->middleware('auth');
+/*
+|--------------------------------------------------------------------------
+| User Routes
+|--------------------------------------------------------------------------\
+*/
 
+//pelajar
+Route::get('/user/pelajar', ['as'=>'user.pelajar', 'uses'=>'ParentController@student'])->middleware('auth');
 Route::get('/user/pelajar/add', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentAdd'])->middleware('auth');
 Route::post('/user/pelajar/store', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentStore'])->middleware('auth');
 Route::get('/user/pelajar/edit/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentEdit'])->middleware('auth');
 Route::post('/user/pelajar/update', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentUpdate'])->middleware('auth');
 
+//exam
 Route::get('/user/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentExam'])->middleware('auth');
 
+//subject
+Route::get('/user/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentExamSubject'])->middleware('auth');
+
+
+/*
+|--------------------------------------------------------------------------
+| Staff Routes
+|--------------------------------------------------------------------------\
+*/
+
 Route::get('/staff/pelajar', ['as'=>'user.pelajar', 'uses'=>'StaffController@student'])->middleware('auth');
+
+//exam
 Route::get('/staff/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExam'])->middleware('auth');
-
-Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubject'])->middleware('auth');
-
 Route::get('/staff/pelajar/exam/add/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamAdd'])->middleware('auth');
 Route::post('/staff/pelajar/exam/store', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamStore'])->middleware('auth');
-Route::post('/staff/pelajar/exam/update', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubjectStore'])->middleware('auth');
+Route::post('/staff/pelajar/exam/update', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubjectUpdate'])->middleware('auth');
+
+//subject
+Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubject'])->middleware('auth');

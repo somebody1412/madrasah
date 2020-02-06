@@ -44,14 +44,18 @@
 
 			<!--Card content-->
 			<div class="card-body">
+			@if($user->role_id == 1||$user->role_id == 1)
 			<form action="/staff/pelajar/exam/update" method='POST'>
 				@csrf
-
+			@endif
 
 				<div class="d-sm-flex justify-content-between mb-3">
 
 					<h4 class="mb-2 mb-sm-0">
+						@if($user->role_id == 1||$user->role_id == 1))
 						<span>Edit Exam	</span>
+						@endif
+						<span>Exam	</span>
 					</h4>
 
 				</div>
@@ -60,10 +64,18 @@
 					<div class="col-12">
 						<div class="form-group">
 							<label class="control-label">Jenis Peperiksaan</label>
+							@if($user->role_id == 1||$user->role_id == 1))
 							<select name="exam" id="mySelect" onchange="getExam()" class="form-control">
 								<option value=null>Please Select Exam</option>
 								@foreach($exams as $exam)
 								<option value="{{$exam->id}}" {{app('request')->input('exam') == $exam->id? 'selected':''}} >{{$exam->name}}</option>
+								@endforeach
+							</select>
+							@endif
+							<select name="exam" id="mySelect" onchange="getExam()" class="form-control">
+								<option value=null hidden>Please Select Exam</option>
+								@foreach($exams as $exam)
+								<option value="{{$exam->id}}" {{app('request')->input('exam') == $exam->id? 'selected':'hidden'}} >{{$exam->name}}</option>
 								@endforeach
 							</select>
 						</div>
@@ -85,7 +97,7 @@
 					</div>
 					@endforeach
 				</div>
-				
+				@if($user->role_id == 1||$user->role_id == 1)
 				<div class="row">
 					<div class="col-12">
 						{!! Form::submit('Save',['class'=>'btn btn-success']) !!}
@@ -93,6 +105,7 @@
 					</div>
 				</div>
 				</form>
+				@endif
 			</div>
 
 

@@ -52,7 +52,7 @@ class AuthController extends Controller
         $user->nric = $request->nric;
         $user->email = $request->email;
         $user->name = $request->name;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->role_id = Role::USER;
         $user->save();
 

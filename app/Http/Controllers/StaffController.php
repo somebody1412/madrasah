@@ -74,7 +74,7 @@ class StaffController extends Controller
         
     }
 
-    public function studentExamSubjectStore(Request $request)
+    public function studentExamSubjectUpdate(Request $request)
     {
         // dd($request->all());
 

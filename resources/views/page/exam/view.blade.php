@@ -80,7 +80,14 @@
                             <td>{{$exam->exam->name}}</td>
                             <td class="text-center">
                             <form action="">
+                                @if($user->role_id == 1 || $user->role_id == 2 )
                                 <a href="/staff/pelajar/exam/subject/{{$exam->exam_id}}/{{$student_id}}?exam={{$exam->exam_id}}" class="btn btn-table btn-view" >Subject</a>
+                                @endif
+
+                                @if($user->role_id == 3 )
+                                <a href="/user/pelajar/exam/subject/{{$exam->exam_id}}/{{$student_id}}?exam={{$exam->exam_id}}" class="btn btn-table btn-view" >Subject</a>
+                                @endif
+
                                 <a href="#" class="btn btn-table btn-edit">Edit</a>
                                 <a href="#" class="btn btn-table btn-delete">Delete</a>
                             </form>
