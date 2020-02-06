@@ -16,9 +16,6 @@ class CreateParentProfilesTable extends Migration
         Schema::create('parent_profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('student_id');
-            $table->foreign('student_id')->references('id')->on('students');
-
             $table->string('nama_penuh')->nullable();
             $table->string('nric')->nullable();
             $table->string('no_passport')->nullable();
@@ -32,6 +29,8 @@ class CreateParentProfilesTable extends Migration
 
             $table->date('tarikh_lahir')->nullable();
             $table->string('sijil_lahir')->nullable();
+
+            $table->string('hubungan')->nullable();
 
             $table->unsignedBigInteger('account_id');
             $table->foreign('account_id')->references('id')->on('users');

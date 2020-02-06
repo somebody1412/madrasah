@@ -31,7 +31,7 @@
 		@endif
 
 		@if($user->role_id == 3)
-		<a href="/dashboard" class="list-group-item waves-effect ">
+		<a href="/user/penjaga" class="list-group-item waves-effect ">
 			<i class="fa fa-book mr-3"></i>
 			Penjaga
 		</a>

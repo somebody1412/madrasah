@@ -45,6 +45,13 @@ Route::get('/user/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentCont
 //subject
 Route::get('/user/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@studentExamSubject'])->middleware('auth');
 
+//penjaga
+Route::get('/user/penjaga', ['as'=>'user.pelajar', 'uses'=>'ParentController@penjaga'])->middleware('auth');
+Route::get('/user/penjaga/add', ['as'=>'user.pelajar', 'uses'=>'ParentController@penjagaAdd'])->middleware('auth');
+Route::get('/user/penjaga/edit/{id}', ['as'=>'user.pelajar', 'uses'=>'ParentController@penjagaEdit'])->middleware('auth');
+Route::post('/user/penjaga/store', ['as'=>'user.pelajar', 'uses'=>'ParentController@penjagaStore'])->middleware('auth');
+Route::post('/user/penjaga/update', ['as'=>'user.pelajar', 'uses'=>'ParentController@penjagaUpdate'])->middleware('auth');
+
 
 /*
 |--------------------------------------------------------------------------

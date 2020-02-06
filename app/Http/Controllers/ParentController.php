@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exam;
+use App\Models\ParentProfile;
 use App\Models\Record;
 use App\Models\Student;
 use App\Models\Subject;
@@ -115,4 +116,68 @@ class ParentController extends Controller
         
     }
 
+    public function penjaga()
+    {
+        $user = Auth::user();
+        $parents = ParentProfile::where('account_id',$user->id)->get();
+        return view('page.penjaga.view',compact('user','parents'));
+    }
+
+    public function penjagaAdd()
+    {
+        $user = Auth::user();
+        $parents = ParentProfile::where('account_id',$user->id)->get();
+        return view('page.penjaga.add',compact('user','parents'));
+    }
+
+    public function penjagaStore(Request $request)
+    {
+        $parent = new ParentProfile;
+        $parent->nama_penuh = $request->nama_penuh;
+        $parent->nric = $request->nric;
+        $parent->no_passport = $request->passport;
+        $parent->warganegara = $request->warganegara;
+        $parent->phone = $request->phone;
+        $parent->bil_tanggungan = $request->tanggungan;
+        $parent->pekerjaan = $request->pekerjaan;
+        $parent->nama_majikan = $request->nama_majikan;
+        $parent->alamat_majikan = $request->alamat;
+        $parent->pendapatan = $request->pendapatan;
+        $parent->tarikh_lahir = $request->tarikh_lahir;
+        $parent->sijil_lahir = $request->sijil_lahir;
+        $parent->hubungan = $request->hubungan;
+        $parent->account_id = Auth::id();
+        $parent->save();
+
+        return redirect('/user/penjaga')->with('success',"Parent successfully registered");
+    }
+    
+    public function penjagaEdit($id)
+    {
+        $user = Auth::user();
+        $parent = ParentProfile::where('account_id',$user->id)->where('id',$id)->first();
+        return view('page.penjaga.edit',compact('user','parent'));
+    }
+    
+    public function penjagaUpdate(Request $request)
+    {
+        $parent = ParentProfile::where('id',$request->id)->first();
+        $parent->nama_penuh = $request->nama_penuh;
+        $parent->nric = $request->nric;
+        $parent->no_passport = $request->passport;
+        $parent->warganegara = $request->warganegara;
+        $parent->phone = $request->phone;
+        $parent->bil_tanggungan = $request->tanggungan;
+        $parent->pekerjaan = $request->pekerjaan;
+        $parent->nama_majikan = $request->nama_majikan;
+        $parent->alamat_majikan = $request->alamat;
+        $parent->pendapatan = $request->pendapatan;
+        $parent->tarikh_lahir = $request->tarikh_lahir;
+        $parent->sijil_lahir = $request->sijil_lahir;
+        $parent->hubungan = $request->hubungan;
+        $parent->account_id = Auth::id();
+        $parent->save();
+    
+        return redirect('/user/penjaga')->with('success',"Parent successfully updated");
+    }
 }
