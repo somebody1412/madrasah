@@ -12,10 +12,10 @@
     <!-- Featured Post -->
     <article class="post featured">
         <header class="major">
-            <span class="date">Welcome to TASNIM</span>
+            <span class="date">Welcome to Madrasah</span>
             <h2><a href="#">A complete<br />
                     Preschool System</a></h2>
-            <p>A fully operational, user friendly pre-school system equipped with statistical dashboard with records on expenses, income and the ability to store e-module. It also provides the ability to manage staffs and students and it is perfectly built to suit the need of a management system for pre-school and kindergarden.
+            <p>Dikenali sebagai Pondok Lebai Wahid atau Muallim Hj. Wahid. Ditubuhkan pada 12 Ogos 1940 oleh Al Marhum Tuan Guru Hj Abd Wahid Bin Othman di Sungai Udang sebagai sekolah agama rakyat yang terulung di Melaka. Ia  menempatkan anak-anak yatim dan miskin untuk mendapatkan pendidikan yang sewajarnya. Oleh itu, sehingga kini, Maahad Annuriah masih menerima kemasukan pelajar dari tahfiz dan pondok.
             </p>
         </header>
         <a href="#" class="image main"><img src="/img/web/pic01.jpg" alt="" /></a>

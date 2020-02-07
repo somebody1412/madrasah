@@ -13,7 +13,7 @@
     <!-- Post -->
     <section class="post">
         <header class="major">
-            <span class="date">Welcome to TASNIM</span>
+            <span class="date">Welcome to Madrasah</span>
             <h1>Registration</h1>
             <p>Description</p>
             <hr>
