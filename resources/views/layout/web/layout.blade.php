@@ -26,8 +26,8 @@
 				<!-- Intro -->
 					<div id="intro">
 						<h1>This is<br />
-						TASNIM</h1>
-						<p>A fully operational, user friendly pre-school system engineered by <a target="_blank" href="https://webforsoho.com/">WebForSOHO</a><br> for the usage of parents and teachers from all registered pre-school and kindergarden.</p>
+						Madrasah</h1>
+						<p>A fully operational, user friendly pre-school system engineered by <a target="_blank" href="https://webforsoho.com/">WebForSOHO</a><br> for the usage of parents and teachers from all registered pre-school.</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -35,7 +35,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">TASNIM</a>
+						<a href="index.html" class="logo">Madrasah</a>
 					</header>
 
 				<!-- Nav -->
@@ -103,7 +103,7 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; TASNIM</li><li>All Rights Reserved</li></ul>
+						<ul><li>&copy; Madrasah</li><li>All Rights Reserved</li></ul>
 					</div>
 
 			</div>
