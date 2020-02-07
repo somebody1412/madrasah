@@ -87,5 +87,19 @@ class StaffController extends Controller
         return redirect('/staff/pelajar/exam/'.$request->id)->with('success',"Exam successfully recorded");
     }
 
+    public function exam()
+    {
+        $user = Auth::user();
+        $exams = Exam::all();
+        return view('page.test.view',compact('user','exams'));
+    }
+
+    public function examAdd()
+    {
+        $user = Auth::user();
+        return view('page.test.add',compact('user'));
+    }
+
+
     
 }

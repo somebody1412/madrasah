@@ -9,20 +9,20 @@
 			<i class="fa fa-pie-chart mr-3"></i>
 			Dashboard
 		</a>
-		<!-- <a href="/dashboard/questions" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.questions.index')?'active':'list-group-item-action'}}">
-			<i class="fa fa-question-circle mr-3"></i>
-			Questions
-		</a> -->
-		<!-- <a href="/dashboard/exam" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.exam.setting')?'active':'list-group-item-action'}}">
-			<i class="fa fa-pencil-square mr-3"></i>
-			Exam Settings
-		</a> -->
+
+		@if($user->role_id == 1 || $user->role_id == 2)
+		<a href="/staff/exam" class="list-group-item waves-effect ">
+			<i class="fa fa-book mr-3"></i>
+			Exam
+		</a>
+		@endif
 		@if($user->role_id == 3)
 		<a href="/user/pelajar" class="list-group-item waves-effect ">
 			<i class="fa fa-book mr-3"></i>
 			Pelajar
 		</a>
 		@endif
+		
 		@if($user->role_id == 1 || $user->role_id == 2)
 		<a href="/staff/pelajar" class="list-group-item waves-effect ">
 			<i class="fa fa-book mr-3"></i>

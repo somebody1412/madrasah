@@ -69,3 +69,14 @@ Route::post('/staff/pelajar/exam/update', ['as'=>'user.pelajar', 'uses'=>'StaffC
 
 //subject
 Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubject'])->middleware('auth');
+
+
+/*
+|--------------------------------------------------------------------------
+| Exam Routes
+|--------------------------------------------------------------------------\
+*/
+
+
+Route::get('/staff/exam', ['as'=>'user.pelajar', 'uses'=>'StaffController@exam'])->middleware('auth');
+Route::get('/staff/exam/add', ['as'=>'user.pelajar', 'uses'=>'StaffController@examAdd'])->middleware('auth');
