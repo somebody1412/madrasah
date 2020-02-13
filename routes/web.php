@@ -80,3 +80,16 @@ Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar
 
 Route::get('/staff/exam', ['as'=>'user.pelajar', 'uses'=>'StaffController@exam'])->middleware('auth');
 Route::get('/staff/exam/add', ['as'=>'user.pelajar', 'uses'=>'StaffController@examAdd'])->middleware('auth');
+Route::post('/staff/exam/store', ['as'=>'user.pelajar', 'uses'=>'StaffController@examStore'])->middleware('auth');
+
+
+/*
+|--------------------------------------------------------------------------
+| Subject Routes
+|--------------------------------------------------------------------------\
+*/
+
+
+Route::get('/staff/exam/subject', ['as'=>'user.pelajar', 'uses'=>'StaffController@examSubject'])->middleware('auth');
+Route::get('/staff/exam/subject/add', ['as'=>'user.pelajar', 'uses'=>'StaffController@examSubjectAdd'])->middleware('auth');
+Route::post('/staff/exam/subject/store', ['as'=>'user.pelajar', 'uses'=>'StaffController@examSubjectStore'])->middleware('auth');

@@ -54,7 +54,7 @@
                     @if($user->role_id == 1 || $user->role_id == 2)
                     <div class="d-flex justify-content-center">
                         <!-- Default input -->
-                        <a href="/staff/exam/add" class="btn btn-primary mr-0">Add</a>
+                        <a href="/staff/exam/subject/add?exam={{$exam_id}}" class="btn btn-primary mr-0">Add</a>
 
                     </div>
                     @endif
@@ -75,19 +75,11 @@
 
                     <!-- Table body -->
                     <tbody>
-                        @foreach($exams as $exam)
+                        @foreach($subjects as $subject)
                         <tr>
-                            <td>{{$exam->name}}</td>
+                            <td>{{$subject->name}}</td>
                             <td class="text-center">
                             <form action="">
-                                @if($user->role_id == 1 || $user->role_id == 2 )
-                                <a href="/staff/exam/subject?exam={{$exam->id}}" class="btn btn-table btn-view" >Subject</a>
-                                @endif
-
-                                @if($user->role_id == 3 )
-                                <a href="/user/exam/subject?exam={{$exam->id}}" class="btn btn-table btn-view" >Subject</a>
-                                @endif
-
                                 <!-- <a href="#" class="btn btn-table btn-edit">Edit</a> -->
                                 <!-- <a href="#" class="btn btn-table btn-delete">Delete</a> -->
                             </form>

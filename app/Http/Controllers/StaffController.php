@@ -42,7 +42,6 @@ class StaffController extends Controller
 
     public function studentExamStore(Request $request)
     {
-        // dd($request->all());
         foreach($request->subject as $key => $subject){
             $record = new Record;
             $record->subject_id = $key;
@@ -100,6 +99,43 @@ class StaffController extends Controller
         return view('page.test.add',compact('user'));
     }
 
+    public function examStore(Request $request)
+    {
+        $user = Auth::user();
+        $exam = new Exam;
+        $exam->name = $request->exam;
+        $exam->year = $request->year;
+        $exam->save();
+
+        return redirect('/staff/exam')->with('success',"Exam successfully recorded");
+    }
+
+    public function examSubject(Request $request)
+    {
+        $user = Auth::user();
+        $subjects = Subject::where('exam_id',$request->exam)->get();
+        $exam_id = $request->exam;
+        return view('page.subject.view',compact('user','subjects','exam_id'));
+    }
+
+    public function examSubjectAdd(Request $request)
+    {
+        $user = Auth::user();
+        $subjects = Subject::where('exam_id',$request->exam)->get();
+        $exam_id = $request->exam;
+        return view('page.subject.add',compact('user','subjects','exam_id'));
+    }
+
+    public function examSubjectStore(Request $request)
+    {
+        $user = Auth::user();
+        $exam = new Subject;
+        $exam->name = $request->subject;
+        $exam->exam_id = $request->exam;
+        $exam->save();
+
+        return redirect('/staff/exam/subject?exam='.$request->exam)->with('success',"Subject successfully recorded");
+    }
 
     
 }
