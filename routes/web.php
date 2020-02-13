@@ -62,10 +62,10 @@ Route::post('/user/penjaga/update', ['as'=>'user.pelajar', 'uses'=>'ParentContro
 Route::get('/staff/pelajar', ['as'=>'user.pelajar', 'uses'=>'StaffController@student'])->middleware('auth');
 
 //exam
-Route::get('/staff/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExam'])->middleware('auth');
 Route::get('/staff/pelajar/exam/add/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamAdd'])->middleware('auth');
 Route::post('/staff/pelajar/exam/store', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamStore'])->middleware('auth');
 Route::post('/staff/pelajar/exam/update', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubjectUpdate'])->middleware('auth');
+Route::get('/staff/pelajar/exam/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExam'])->middleware('auth');
 
 //subject
 Route::get('/staff/pelajar/exam/subject/{id}/{student_id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamSubject'])->middleware('auth');
