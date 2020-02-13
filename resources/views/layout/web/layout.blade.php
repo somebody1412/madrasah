@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Tasnim</title>
+		<title>Madrasah</title>
 		<meta charset="utf-8" />
         <link rel="shortcut icon" href="/img/logo/{{env('APP_LOGO')}}.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

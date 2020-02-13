@@ -18,7 +18,7 @@
                         to manage Invoices</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic02.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your invoices in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your invoices in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
@@ -30,7 +30,7 @@
                         to manage Students</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic03.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your students in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your students in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
@@ -42,7 +42,7 @@
                         to manage Bills</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic04.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your bills in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your bills in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
@@ -54,7 +54,7 @@
                         to manage Payments</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic05.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your payments in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your payments in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
@@ -66,7 +66,7 @@
                         to manage Vendors</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic06.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your vendors in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your vendors in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
@@ -78,7 +78,7 @@
                         to manage Modules</a></h2>
             </header>
             <a href="#" class="image fit"><img src="/img/web/pic07.jpg" alt="" /></a>
-            <p>TASNIM is equipped with the feature to monitor your modules in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
+            <p>Madrasah is equipped with the feature to monitor your modules in a clean and organized user interface. It also comes in a chart based interface provided at the dashboard.</p>
             <ul class="actions special">
                 <!-- <li><a href="#" class="button">Full Story</a></li> -->
             </ul>
