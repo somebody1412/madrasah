@@ -12,12 +12,12 @@
 */
 
 
-Route::get('/', ['as'=>'web', 'uses'=>'WebController@index']);
-Route::get('/feature', ['as'=>'feature', 'uses'=>'WebController@feature']);
-Route::get('/elearning', ['as'=>'elearning', 'uses'=>'WebController@elearning']);
-Route::get('/register', ['as'=>'register', 'uses'=>'WebController@register']);
+// Route::get('/', ['as'=>'web', 'uses'=>'WebController@index']);
+// Route::get('/feature', ['as'=>'feature', 'uses'=>'WebController@feature']);
+// Route::get('/elearning', ['as'=>'elearning', 'uses'=>'WebController@elearning']);
+// Route::get('/register', ['as'=>'register', 'uses'=>'WebController@register']);
 
-Route::get('/login', ['uses'=>"AuthController@index",'as'=>'index']);
+Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
 Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
 Route::get('/register', ['uses'=>"AuthController@indexRegister"]);

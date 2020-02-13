@@ -21,10 +21,10 @@
         <form class="d-flex justify-content-center">
             {{ Form::open(array('method' =>'GET')) }}
             <!-- Default input -->
-            <input type="search" name="query" placeholder="Type your query" aria-label="Search" class="form-control">
+            <!-- <input type="search" name="query" placeholder="Type your query" aria-label="Search" class="form-control">
             <button class="btn btn-primary" type="submit">
                 <i class="fa fa-search"></i>
-            </button>
+            </button> -->
             {!! Form::close() !!}
         </form>
 
@@ -82,14 +82,15 @@
                             <form action="">
                                 @if($user->role_id == 1 || $user->role_id == 2 )
                                 <a href="/staff/pelajar/exam/subject/{{$exam->exam_id}}/{{$student_id}}?exam={{$exam->exam_id}}" class="btn btn-table btn-view" >Subject</a>
+                                <!-- <a href="#" class="btn btn-table btn-edit">Edit</a> -->
                                 @endif
 
                                 @if($user->role_id == 3 )
                                 <a href="/user/pelajar/exam/subject/{{$exam->exam_id}}/{{$student_id}}?exam={{$exam->exam_id}}" class="btn btn-table btn-view" >Subject</a>
                                 @endif
 
-                                <a href="#" class="btn btn-table btn-edit">Edit</a>
-                                <a href="#" class="btn btn-table btn-delete">Delete</a>
+                                
+                                <!-- <a href="#" class="btn btn-table btn-delete">Delete</a> -->
                             </form>
 
                             </td>

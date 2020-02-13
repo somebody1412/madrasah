@@ -64,7 +64,6 @@
 		<!-- Navbar -->
 
 		<!-- Sidebar -->
-		@include('layout.sidebar')
 		<!-- /#sidebar-wrapper -->
 
 	</header>

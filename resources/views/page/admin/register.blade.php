@@ -55,14 +55,14 @@
 				<!-- Links -->
 				<ul class="navbar-nav ml-auto smooth-scroll">
 					<li class="nav-item">
-						<a class="nav-link" href="#intro">Home</a>
+						<a class="nav-link" href="/">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#best-features">About</a>
+						<a class="nav-link" href="/">About</a>
 					</li>
 
 					<li class="nav-item">
-						<a href="/login" class="nav-link" href="#best-features">Sign In</a>
+						<a href="/" class="nav-link" href="#best-features">Sign In</a>
 					</li>
 				</ul>
 				<!-- Links -->
