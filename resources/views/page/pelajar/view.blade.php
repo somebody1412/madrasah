@@ -52,7 +52,7 @@
 
                     <div class="d-flex justify-content-center">
                         <!-- Default input -->
-                        <a href="/user/pelajar/add" class="btn btn-primary mr-0">Add</a>
+                        <!-- <a href="/user/pelajar/add" class="btn btn-primary mr-0">Add</a> -->
 
                     </div>
 
