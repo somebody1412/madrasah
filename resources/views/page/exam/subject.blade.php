@@ -105,7 +105,11 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<label class="control-label">Gred</label>
-							<input type="text" name="" class="form-control" value="Tidak Hadir" disabled/>
+							<select name="gred[{{$record->id}}]" class="form-control">
+								@foreach($greds as $gred)
+								<option value="{{$gred->id}} " {{ $record->gred_id == $gred->id? 'selected':'hidden'}}>{{$gred->name}}</option>
+								@endforeach
+							</select>
 						</div>
 					</div>
 					@endforeach

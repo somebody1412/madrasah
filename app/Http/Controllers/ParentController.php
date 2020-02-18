@@ -42,6 +42,7 @@ class ParentController extends Controller
         $student_id = isset(Student::where('nric',$nric)->first()->id)?Student::where('nric',$nric)->first()->id:null;
         
         $exams = Exam::with('subject')->get();
+        $greds = Gred::all();
         $subjects = collect([]);
 
         if($request->get('exam') != null){
@@ -50,7 +51,7 @@ class ParentController extends Controller
 
         $records = Record::with('exam','subject')->where('student_id',$student_id)->where('exam_id',$exam)->get();
 
-        return view('page.exam.subject',compact('nric','exams','subjects','records','student_id'));
+        return view('page.exam.subject',compact('nric','exams','subjects','records','student_id','greds'));
     }
 
     public function publicStudentStore(Request $request)
