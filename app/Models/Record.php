@@ -13,4 +13,8 @@ class Record extends Model
     public function subject(){
         return $this->belongsTo(Subject::class, 'subject_id', 'id');
     }
+
+    public function student(){
+        return $this->belongsTo(Student::class, 'student_id', 'id');
+    }
 }

@@ -20,6 +20,10 @@
 Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
 Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
+Route::get('/public/search', ['uses'=>"ParentController@search"]);
+Route::get('/public/exam', ['uses'=>"ParentController@publicExam"]);
+Route::get('/public/subject', ['uses'=>"ParentController@publicSubject"]);
+
 Route::get('/register', ['uses'=>"AuthController@indexRegister"]);
 Route::post('/register', ['uses'=>"AuthController@register"]);
 

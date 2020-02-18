@@ -26,6 +26,9 @@ class CreateRecordsTable extends Migration
             $table->unsignedBigInteger('exam_id');
             $table->foreign('exam_id')->references('id')->on('exams');
 
+            $table->unsignedBigInteger('gred_id');
+            $table->foreign('gred_id')->references('id')->on('greds');
+
             $table->timestamps();
         });
     }

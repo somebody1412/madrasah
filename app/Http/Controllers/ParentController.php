@@ -13,6 +13,44 @@ use Carbon\Carbon;
 
 class ParentController extends Controller
 {
+
+    public function search(Request $request)
+    {
+        $nric =  $request->nric;
+        $student = Student::with('record')->where('nric',$nric)->first();
+        
+        return view('page.pelajar.index',compact('student','nric'));
+    }
+
+    public function publicExam(Request $request)
+    {
+        $nric =  $request->nric;
+        
+        $student_id = Student::where('nric',$nric)->first()->id;
+        $exams = Record::with('exam')->where('student_id',$student_id)->select('exam_id')->groupBy('exam_id')->get();
+        
+        return view('page.exam.index',compact('nric','exams','student_id'));
+    }
+
+    public function publicSubject(Request $request)
+    {
+        $nric =  $request->nric;
+        $exam =  $request->exam;
+
+        $student_id = isset(Student::where('nric',$nric)->first()->id)?Student::where('nric',$nric)->first()->id:null;
+        
+        $exams = Exam::with('subject')->get();
+        $subjects = collect([]);
+
+        if($request->get('exam') != null){
+            $subjects = Subject::where('exam_id',$exam)->get();
+        }
+
+        $records = Record::with('exam','subject')->where('student_id',$student_id)->where('exam_id',$exam)->get();
+
+        return view('page.exam.subject',compact('nric','exams','subjects','records','student_id'));
+    }
+
     public function student()
     {
         $user = Auth::user();

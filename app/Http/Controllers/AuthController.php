@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Role;
+use App\Models\Student;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\Request;
@@ -13,8 +14,14 @@ class AuthController extends Controller
 {
     public function index()
     {
+        return view('page.admin.search');
+    }
+
+    public function indexLogin(Request $request)
+    {
         return view('page.admin.index');
     }
+
     public function indexRegister(Request $request)
     {
         return view('page.admin.register');

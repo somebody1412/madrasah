@@ -5,7 +5,7 @@
 	</a>
 
 	<div class="list-group list-group-flush">
-		<a href="/dashboard" class="list-group-item waves-effect {{(\Route::current()->getName() == 'dashboard.home')?'active':'list-group-item-action'}}">
+		<a href="/dashboard" class="list-group-item waves-effect ">
 			<i class="fa fa-pie-chart mr-3"></i>
 			Dashboard
 		</a>
@@ -43,11 +43,12 @@
 			Penjaga
 		</a>
 		@endif
-
+		@if(isset($user))
 		<a href="/logout" class="list-group-item waves-effect ">
 			<i class="fa fa-sign-out mr-3"></i>
 			Logout
 		</a>
+		@endif
 	</div>
 
 </div>

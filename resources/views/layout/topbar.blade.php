@@ -1,5 +1,5 @@
 <!-- Brand -->
-<a class="navbar-brand waves-effect" href="/dashboard" target="_blank">
+<a class="navbar-brand waves-effect" href="/" target="_blank">
 	<strong class="main-text">Madrasah</strong>
 </a>
 
@@ -13,62 +13,72 @@
 
 	<!-- Left -->
 	<ul class="navbar-nav mr-auto">
+		@if(!isset($user))
+		<li class="nav-item">
+			<a class="nav-link waves-effect" href="/public/search?nric={{$nric}}" >
+				Student
+			</a>
+		</li>
+		@endif
+		@if(!isset($user))
+		<li class="nav-item">
+			<a class="nav-link waves-effect" href="/public/exam?nric={{$nric}}" >
+				Exam
+			</a>
+		</li>
+		@endif
+		@if(isset($user))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/dashboard" >
 				Dashboard
 			</a>
 		</li>
-		@if($user->role_id == 1 || $user->role_id == 2)
+		@endif
+		@if(isset($user) && ($user->role_id == 1 || $user->role_id == 2))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/staff/exam" >
 				Exam
 			</a>
 		</li>
 		@endif
-		@if($user->role_id == 3)
+		@if(isset($user) && ($user->role_id == 3))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/user/pelajar" >
 				Pelajar
 			</a>
 		</li>
 		@endif
-		@if($user->role_id == 1 || $user->role_id == 2)
+		@if(isset($user) && ($user->role_id == 1 || $user->role_id == 2))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/staff/pelajar" >
 				Pelajar
 			</a>
 		</li>
 		@endif
-		@if($user->role_id == 3)
+		@if(isset($user) && $user->role_id == 3)
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/user/penjaga" >
 				Penjaga
 			</a>
 		</li>
 		@endif
-		@if($user->role_id == 1 || $user->role_id == 2)
+		@if(isset($user) && ($user->role_id == 1 || $user->role_id == 2))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/dashboard" >
 				Penjaga
 			</a>
 		</li>
 		@endif
-
+		@if(isset($user))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/logout" >
 				Logout
 			</a>
 		</li>
-		
+		@endif
 	</ul>
 
 	<!-- Right -->
-	<!-- <ul class="navbar-nav nav-flex-icons">
-		<li class="nav-item">
-			<a href="#" class="nav-link border border-light rounded waves-effect" target="_blank">
-				<i class="fa fa-user mr-2">{{$user->name}}</i>
-			</a>
-		</li>
-	</ul> -->
+
 
 </div>
