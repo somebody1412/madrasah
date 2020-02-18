@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exam;
+use App\Models\Gred;
 use App\Models\Hostel;
 use App\Models\ParentProfile;
 use App\Models\Record;
