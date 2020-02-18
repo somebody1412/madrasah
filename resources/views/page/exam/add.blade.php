@@ -84,7 +84,7 @@ function insertParam(key, value)
 							<select name="exam" id="mySelect" onchange="getExam()" class="form-control">
 								<option value=null>Please Select Exam</option>
 								@foreach($exams as $exam)
-								<option value="{{$exam->id}}" {{app('request')->input('exam') == $exam->id? 'selected':''}} >{{$exam->name}}</option>
+								<option value="{{$exam->id}}" {{app('request')->input('exam') == $exam->id? 'selected':''}} >{{$exam->name}} {{$exam->year}}</option>
 								@endforeach
 							</select>
 						</div>
@@ -92,16 +92,27 @@ function insertParam(key, value)
 				</div>
 				<div class="row">
 					@foreach($subjects as $subject)
-					<div class="col-6">
+					<div class="col-md-4">
 						<div class="form-group">
 							<label class="control-label">Name Subject</label>
 							<input type="text" name="subject[{{$subject->id}}]" class="form-control"value="{{$subject->name}}" />
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-md-4">
 						<div class="form-group">
 							<label class="control-label">Mark</label>
 							<input type="number" name="mark[{{$subject->id}}]" class="form-control" />
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Gred</label>
+							<select name="gred[{{$subject->id}}]" class="form-control">
+								<option value=null>Please Select Gred</option>
+								@foreach($greds as $gred)
+								<option value="{{$gred->id}}" >{{$gred->name}}</option>
+								@endforeach
+							</select>
 						</div>
 					</div>
 					@endforeach

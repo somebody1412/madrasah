@@ -55,20 +55,6 @@
 			</a>
 		</li>
 		@endif
-		@if(isset($user) && $user->role_id == 3)
-		<li class="nav-item">
-			<a class="nav-link waves-effect" href="/user/penjaga" >
-				Penjaga
-			</a>
-		</li>
-		@endif
-		@if(isset($user) && ($user->role_id == 1 || $user->role_id == 2))
-		<li class="nav-item">
-			<a class="nav-link waves-effect" href="/dashboard" >
-				Penjaga
-			</a>
-		</li>
-		@endif
 		@if(isset($user))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/logout" >

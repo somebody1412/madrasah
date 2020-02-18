@@ -80,14 +80,9 @@
                             <td class="text-center">
                             <form action="">
                                 @if($user->role_id == 1 || $user->role_id == 2 )
+                                <a href="/staff/pelajar/profil/{{$student->id}}" class="btn btn-table btn-view">Profil</a>
                                 <a href="/staff/pelajar/exam/{{$student->id}}" class="btn btn-table btn-view">Exam</a>
-                                @endif
-                                @if($user->role_id == 3 )
-                                <a href="/user/pelajar/exam/{{$student->id}}" class="btn btn-table btn-view">Exam</a>
-                                <a href="/user/pelajar/edit/{{$student->id}}" class="btn btn-table btn-edit">Edit</a>
-                                @endif
-                                @if($user->role_id == 1 || $user->role_id == 2 )
-                                <a href="#" class="btn btn-table btn-delete">Delete</a>
+                                <a href="/staff/pelajar/penjaga/{{$student->id}}" class="btn btn-table btn-view">Penjaga</a>
                                 @endif
                             </form>
 

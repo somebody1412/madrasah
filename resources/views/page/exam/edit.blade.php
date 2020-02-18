@@ -44,7 +44,7 @@
 
 			<!--Card content-->
 			<div class="card-body">
-			@if($user->role_id == 1||$user->role_id == 1)
+			@if($user->role_id == 1||$user->role_id == 2)
 			<form action="/staff/pelajar/exam/update" method='POST'>
 				@csrf
 			@endif
@@ -83,21 +83,32 @@
 				</div>
 				<div class="row">
 					@foreach($records as $record)
-					<div class="col-6">
+					<div class="col-md-4">
 						<div class="form-group">
 							<label class="control-label">Name Subject</label>
 							<input type="text" name="subject[{{$record->id}}]" class="form-control" value="{{$record->subject->name}}" />
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-md-4">
 						<div class="form-group">
 							<label class="control-label">Mark</label>
 							<input type="number" name="mark[{{$record->id}}]" class="form-control" value="{{$record->mark}}"/>
 						</div>
 					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label class="control-label">Gred</label>
+							<select name="gred[{{$record->id}}]" class="form-control">
+								<option value=null>Please Select Gred</option>
+								@foreach($greds as $gred)
+								<option value="{{$gred->id}} " {{ $record->gred_id == $gred->id? 'selected':''}}>{{$gred->name}}</option>
+								@endforeach
+							</select>
+						</div>
+					</div>
 					@endforeach
 				</div>
-				@if($user->role_id == 1||$user->role_id == 1)
+				@if($user->role_id == 1||$user->role_id == 2)
 				<div class="row">
 					<div class="col-12">
 						{!! Form::submit('Save',['class'=>'btn btn-success']) !!}

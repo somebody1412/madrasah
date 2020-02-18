@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exam;
+use App\Models\Gred;
+use App\Models\Hostel;
 use App\Models\Record;
 use App\Models\Student;
 use App\Models\Subject;
@@ -18,6 +20,23 @@ class StaffController extends Controller
         return view('page.pelajar.view',compact('user','students'));
     }
 
+    public function penjaga($student_id)
+    {
+        $user = Auth::user();
+        $parents = Student::with('parent_1','parent_2')->where('id',$student_id)->first();
+        $parent1 = $parents['parent_1'];
+        $parent2 = $parents['parent_2'];
+        return view('page.penjaga.index',compact('user','parent1','parent2'));
+    }
+
+    public function studentProfile($student_id)
+    {
+        $user = Auth::user();
+        $student = Student::where('id',$student_id)->first();
+        $hostel = Hostel::where('student_id',$student_id)->first();
+        return view('page.pelajar.index',compact('user','student','hostel'));
+    }
+
     public function studentExam($id)
     {
         $user = Auth::user();
@@ -31,13 +50,14 @@ class StaffController extends Controller
         $user = Auth::user();
         $student_id = $id;
         $exams = Exam::with('subject')->get();
+        $greds = Gred::all();
         $subjects = collect([]);
 
         if($request->get('exam') != null){
             $subjects = Subject::where('exam_id',$request->get('exam'))->get();
         }   
 
-        return view('page.exam.add',compact('user','exams','subjects','student_id'));
+        return view('page.exam.add',compact('user','exams','subjects','student_id','greds'));
     }
 
     public function studentExamStore(Request $request)
@@ -46,6 +66,7 @@ class StaffController extends Controller
             $record = new Record;
             $record->subject_id = $key;
             $record->mark = $request->mark[$key];
+            $record->gred_id = $request->gred[$key];
             $record->student_id = $request->id;
             $record->exam_id = $request->exam;
             $record->save();
@@ -61,6 +82,7 @@ class StaffController extends Controller
 
         $student_id = $id;
         $exams = Exam::with('subject')->get();
+        $greds = Gred::all();
         $subjects = collect([]);
 
         if($request->get('exam') != null){
@@ -69,7 +91,7 @@ class StaffController extends Controller
 
         $records = Record::with('exam','subject')->where('student_id',$student_id)->where('exam_id',$id)->get();
 
-        return view('page.exam.edit',compact('user','exams','subjects','records','student_id'));
+        return view('page.exam.edit',compact('user','exams','subjects','records','student_id','greds'));
         
     }
 

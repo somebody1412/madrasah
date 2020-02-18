@@ -68,6 +68,7 @@
                     <thead class="blue-grey lighten-4">
                         <tr>
                             <th>Name</th>
+                            <th>Year</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -78,6 +79,7 @@
                         @foreach($exams as $exam)
                         <tr>
                             <td>{{$exam->exam->name}}</td>
+                            <td>{{$exam->exam->year}}</td>
                             <td class="text-center">
                             <form action="">
                                 @if(isset($user) && ($user->role_id == 1 || $user->role_id == 2))

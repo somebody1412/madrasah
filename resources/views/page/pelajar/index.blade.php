@@ -137,9 +137,53 @@
 						</div>
 					</div>
 				</div> -->
-				<div class="row">
-					
+				
+				@if(isset($hostel) && $hostel)
+				<div class="d-sm-flex justify-content-between mb-3">
+
+					<h4 class="mb-2 mb-sm-0">
+						<span>Maklumat Kesihatan Murid</span>
+					</h4>
+
 				</div>
+				
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<input type="checkbox" name="kulit_berjangkit" {{$hostel->penyakit_kulit == 1?"checked":""}}/>
+							<label> Penyakit Kulit Berjangkit</label>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<input type="checkbox" name="semput" {{$hostel->lelah == 1?"checked":""}}/>
+							<label> Semput / Lelah</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<input type="checkbox" name="sawan" {{$hostel->sawan == 1?"checked":""}}/>
+							<label> Sawan</label>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<input type="checkbox" name="lemah_jantung" {{$hostel->lemah_jantung == 1?"checked":""}}/>
+							<label> Lemah Jantung</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="form-group">
+							<label class="control-label">Penyakit Lain (jika ada)</label>
+							<textarea name='lain' class="form-control" rows="3">{{$hostel->others}}</textarea>
+						</div>
+					</div>
+				</div>
+				@endif
 				@else
 				<div class="row">
 					<div class="col-md-6">

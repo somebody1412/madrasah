@@ -66,6 +66,8 @@ Route::post('/user/penjaga/update', ['as'=>'user.pelajar', 'uses'=>'ParentContro
 */
 
 Route::get('/staff/pelajar', ['as'=>'user.pelajar', 'uses'=>'StaffController@student'])->middleware('auth');
+Route::get('/staff/pelajar/penjaga/{student_id}', ['as'=>'user.pelajar.penjaga', 'uses'=>'StaffController@penjaga'])->middleware('auth');
+Route::get('/staff/pelajar/profil/{student_id}', ['as'=>'user.pelajar.profil', 'uses'=>'StaffController@studentProfile'])->middleware('auth');
 
 //exam
 Route::get('/staff/pelajar/exam/add/{id}', ['as'=>'user.pelajar', 'uses'=>'StaffController@studentExamAdd'])->middleware('auth');

@@ -61,13 +61,13 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label class="control-label">Nama Penuh</label>
-							<input type="text" name="nama_penuh" class="form-control" />
+							<input type="text" name="nama_penuh" class="form-control" required/>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label class="control-label">Tarikh Lahir</label>
-							<input type="date" name="tarikh_lahir" class="form-control" />
+							<input type="date" name="tarikh_lahir" class="form-control" required/>
 						</div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label class="control-label">No Pengenalan</label>
-							<input type="text" name="nric" class="form-control" />
+							<input type="text" name="nric" class="form-control" required/>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -148,7 +148,7 @@
 					<div class="col-6">
 						<div class="form-group">
 							<label class="control-label">Nama Penuh</label>
-							<input type="text" name="nama_penuh_1" class="form-control" />
+							<input type="text" name="nama_penuh_1" class="form-control" required/>
 						</div>
 					</div>
 					<div class="col-6">
