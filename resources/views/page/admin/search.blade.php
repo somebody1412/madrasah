@@ -55,14 +55,18 @@
 				<!-- Links -->
 				<ul class="navbar-nav ml-auto smooth-scroll">
 					<li class="nav-item">
-						<a class="nav-link" href="">Home</a>
+						<a class="nav-link" href="/">E-Waris</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/s">About</a>
+						<a class="nav-link" href="/login">E-Staff</a>
 					</li>
 
 					<li class="nav-item">
-						<a href="/register" class="nav-link" href="#best-features">Sign Up</a>
+						<a href="/register?status=luar" class="nav-link" href="#best-features">Pendaftaran Murid Luar</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="/register?status=asrama" class="nav-link" href="#best-features">Pendaftaran Murid Berasrama</a>
 					</li>
 				</ul>
 				<!-- Links -->
@@ -118,9 +122,11 @@
 	<!--/.Mask-->
 
 </header>
-
-@if (session("err"))
-<p><b>{{session("err")}}!</b></p>
+@if (Session::has('success'))
+swal('',@json(Session::get('success')),'success');
+@endif
+@if (Session::has('err'))
+swal('',@json(Session::get('err')),'warning');
 @endif
 
 </body>

@@ -21,11 +21,28 @@
 
 	<!-- Script -->
 	<script type="text/javascript" src="/js/plugin/jquery-3.4.1.min.js{{ config('app.link_version') }}"></script>
-	<script src="/js/plugin/popper.min.js{{ config('app.link_version') }}"></script>
 	<script type="text/javascript" src="/js/plugin/bootstrapmdb.min.js{{ config('app.link_version') }}"></script>
 	<script type="text/javascript" src="/js/plugin/mdb.min.js{{ config('app.link_version') }}"></script>
 	<script type="text/javascript" src="/js/page/admin.js{{ config('app.link_version') }}"></script>
 	<!-- Script End -->
+
+	<!-- Styles -->
+	<link href="/css/plugin/normalize.min.css{{ config('app.link_version') }}" type="text/css" rel="stylesheet"/>
+	<link href="/css/plugin/themify-icons.min.css{{ config('app.link_version') }}" type="text/css" rel="stylesheet"/>
+	<link href="/css/plugin/tooltipster.bundle.min.css{{ config('app.link_version') }}" type="text/css" rel="stylesheet"/>
+
+	<!-- Custom styles for this template -->
+	<link href="/css/page/main2.css{{ config('app.link_version') }}" rel="stylesheet">
+	<!-- Styles end -->
+
+	<!-- Script -->
+	<script type="text/javascript" src="/js/plugin/popper.min.js{{ config('app.link_version') }}"></script>
+	<script type="text/javascript" src="/js/plugin/tooltipster.bundle.min.js{{ config('app.link_version') }}"></script>
+	<script type="text/javascript" src="/js/plugin/sweetalert.min.js{{ config('app.link_version') }}"></script>
+	<script type="text/javascript" src="/js/plugin/jquery.nicescroll.min.js{{ config('app.link_version') }}"></script>
+	<script type="text/javascript" src="/js/page/main.js{{ config('app.link_version') }}"></script>
+	<!-- Script End -->
+
 
 	@yield('head')
 
@@ -55,14 +72,18 @@
 				<!-- Links -->
 				<ul class="navbar-nav ml-auto smooth-scroll">
 					<li class="nav-item">
-						<a class="nav-link" href="">Home</a>
+						<a class="nav-link" href="/">E-Waris</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/s">About</a>
+						<a class="nav-link" href="/login">E-Staff</a>
 					</li>
 
 					<li class="nav-item">
-						<a href="/register" class="nav-link" href="#best-features">Sign Up</a>
+						<a href="/register?status=luar" class="nav-link" href="#best-features">Pendaftaran Murid Luar</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="/register?status=asrama" class="nav-link" href="#best-features">Pendaftaran Murid Berasrama</a>
 					</li>
 				</ul>
 				<!-- Links -->
@@ -120,8 +141,11 @@
 
 </header>
 
-@if (session("err"))
-<p><b>{{session("err")}}!</b></p>
+@if (Session::has('success'))
+swal('',@json(Session::get('success')),'success');
+@endif
+@if (Session::has('err'))
+swal('',@json(Session::get('err')),'warning');
 @endif
 
 </body>

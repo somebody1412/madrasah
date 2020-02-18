@@ -18,11 +18,13 @@
 // Route::get('/register', ['as'=>'register', 'uses'=>'WebController@register']);
 
 Route::get('/', ['uses'=>"AuthController@index",'as'=>'index']);
+Route::get('/login', ['uses'=>"AuthController@indexLogin",'as'=>'index']);
 Route::post('/login', ['uses'=>"AuthController@auth",'as'=>'index']);
 
 Route::get('/public/search', ['uses'=>"ParentController@search"]);
 Route::get('/public/exam', ['uses'=>"ParentController@publicExam"]);
 Route::get('/public/subject', ['uses'=>"ParentController@publicSubject"]);
+Route::post('/public/pelajar/store', ['uses'=>"ParentController@publicStudentStore"]);
 
 Route::get('/register', ['uses'=>"AuthController@indexRegister"]);
 Route::post('/register', ['uses'=>"AuthController@register"]);

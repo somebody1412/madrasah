@@ -32,9 +32,6 @@ class CreateParentProfilesTable extends Migration
 
             $table->string('hubungan')->nullable();
 
-            $table->unsignedBigInteger('account_id');
-            $table->foreign('account_id')->references('id')->on('users');
-
             $table->timestamps();
         });
     }

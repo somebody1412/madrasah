@@ -13,14 +13,14 @@
 
 	<!-- Left -->
 	<ul class="navbar-nav mr-auto">
-		@if(!isset($user))
+		@if(!isset($user) && isset($nric))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/public/search?nric={{$nric}}" >
 				Student
 			</a>
 		</li>
 		@endif
-		@if(!isset($user))
+		@if(!isset($user) && isset($nric))
 		<li class="nav-item">
 			<a class="nav-link waves-effect" href="/public/exam?nric={{$nric}}" >
 				Exam

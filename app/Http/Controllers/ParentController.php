@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exam;
+use App\Models\Hostel;
 use App\Models\ParentProfile;
 use App\Models\Record;
 use App\Models\Student;
@@ -10,6 +11,7 @@ use App\Models\Subject;
 use Illuminate\Http\Request;
 use Auth;
 use Carbon\Carbon;
+use DB;
 
 class ParentController extends Controller
 {
@@ -49,6 +51,91 @@ class ParentController extends Controller
         $records = Record::with('exam','subject')->where('student_id',$student_id)->where('exam_id',$exam)->get();
 
         return view('page.exam.subject',compact('nric','exams','subjects','records','student_id'));
+    }
+
+    public function publicStudentStore(Request $request)
+    {
+        $student = Student::where('nric',$request->nric)->first();
+        
+        if($student){
+            return redirect()->back()->with('err',"Student already existed");
+        }
+
+        try {
+            DB::beginTransaction();
+            
+            $parent_1 = new ParentProfile;
+            $parent_1->nama_penuh = $request->nama_penuh_1;
+            $parent_1->nric = $request->nric_1;
+            $parent_1->no_passport = $request->passport_1;
+            $parent_1->warganegara = $request->warganegara_1;
+            $parent_1->phone = $request->phone_1;
+            $parent_1->bil_tanggungan = $request->tanggungan_1;
+            $parent_1->pekerjaan = $request->pekerjaan_1;
+            $parent_1->nama_majikan = $request->nama_majikan_1;
+            $parent_1->alamat_majikan = $request->alamat_1;
+            $parent_1->pendapatan = $request->pendapatan_1;
+            $parent_1->tarikh_lahir = $request->tarikh_lahir_1;
+            $parent_1->sijil_lahir = $request->sijil_lahir_1;
+            $parent_1->hubungan = $request->hubungan_1;
+            $parent_1->save();
+
+            $parent_2 = new ParentProfile;
+            $parent_2->nama_penuh = $request->nama_penuh_2;
+            $parent_2->nric = $request->nric_2;
+            $parent_2->no_passport = $request->passport_2;
+            $parent_2->warganegara = $request->warganegara_2;
+            $parent_2->phone = $request->phone_2;
+            $parent_2->bil_tanggungan = $request->tanggungan_2;
+            $parent_2->pekerjaan = $request->pekerjaan_2;
+            $parent_2->nama_majikan = $request->nama_majikan_2;
+            $parent_2->alamat_majikan = $request->alamat_2;
+            $parent_2->pendapatan = $request->pendapatan_2;
+            $parent_2->tarikh_lahir = $request->tarikh_lahir_2;
+            $parent_2->sijil_lahir = $request->sijil_lahir_2;
+            $parent_2->hubungan = $request->hubungan_2;
+            $parent_2->save();
+
+            
+            $student = new Student;
+            $student->parent_id_1 = $parent_1->id;
+            $student->parent_id_2 = $parent_2->id;
+            $student->nama_penuh = $request->nama_penuh;
+            $student->tarikh_lahir = $request->tarikh_lahir;
+            $student->nric = $request->nric;
+            $student->sijil_lahir = $request->sijil_lahir;
+            $student->no_passport = $request->passport;
+            $student->warganegara = $request->warganegara;
+            $student->kaum = $request->kaum;
+            $student->agama = $request->agama;
+            $student->anak_ke_berapa = $request->anak_ke_berapa;
+            $student->status_murid = $request->status_murid;
+            $student->alamat_tetap = $request->alamat;
+            $student->tarikh_daftar = Carbon::now();
+            $student->save();
+
+            if($request->status == 'luar'){
+
+            }elseif($request->status == 'asrama'){
+                $hostel = new Hostel;
+                $hostel->student_id = $student->id;
+                $hostel->penyakit_kulit = $request->kulit_berjangkit?1:2;
+                $hostel->lelah = $request->semput?1:2;
+                $hostel->sawan = $request->sawan?1:2;
+                $hostel->lemah_jantung = $request->lemah_jantung?1:2;
+                $hostel->others = $request->lain;
+                $hostel->save();
+            }else{
+
+            }
+            DB::commit();
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            
+            return redirect()->back()->with('err',"Registration invalid");
+        }
+
+        return redirect('/register?status=asrama')->with('success',"Student successfully registered");
     }
 
     public function student()

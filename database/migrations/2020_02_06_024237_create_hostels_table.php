@@ -23,7 +23,7 @@ class CreateHostelsTable extends Migration
             $table->enum('lelah',[ 1, 2 ])->nullable()->comment('1 - yes, 2 - no');
             $table->enum('sawan',[ 1, 2 ])->nullable()->comment('1 - yes, 2 - no');
             $table->enum('lemah_jantung',[ 1, 2 ])->nullable()->comment('1 - yes, 2 - no');
-            $table->string('others')->nullable()->comment('1 - yes, 2 - no');
+            $table->longText('others')->nullable()->comment('1 - yes, 2 - no');
 
             $table->timestamps();
         });

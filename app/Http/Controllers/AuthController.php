@@ -24,7 +24,9 @@ class AuthController extends Controller
 
     public function indexRegister(Request $request)
     {
-        return view('page.admin.register');
+        $status = $request->status;
+        
+        return view('page.pelajar.pendaftaran', compact('status'));
     }
 
     public function auth(Request $request)
